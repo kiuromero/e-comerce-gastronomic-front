@@ -5,16 +5,18 @@ import { CardProductComponent } from './card-product/card-product.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainHomeComponent } from './main-home/main-home.component';
 import {HomeRoutingModule} from './home-routing.module'
-
-
+import { LoginComponent } from '../auth/login/login.component';
 @NgModule({
   declarations: [
     NavBarComponent,
     SliderComponent,
     CardProductComponent,
     FooterComponent,
-    MainHomeComponent
+    MainHomeComponent,
+
+    //Angular Material    
   ],
+  entryComponents : [LoginComponent],
   imports: [    
     HomeRoutingModule    
   ],
