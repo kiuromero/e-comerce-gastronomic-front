@@ -7,14 +7,11 @@ import { NavBarComponent } from './home/nav-bar/nav-bar.component';
 import { SliderComponent } from './home/slider/slider.component';
 import { CardProductComponent } from './home/card-product/card-product.component';
 import { FooterComponent } from './home/footer/footer.component';
+import { LoginComponent } from './auth/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent,
-    SliderComponent,
-    CardProductComponent,
-    FooterComponent
   ],
   imports: [
     BrowserModule,
