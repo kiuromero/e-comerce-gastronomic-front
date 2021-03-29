@@ -1,13 +1,17 @@
+<div class="logo">
+  <img style="width: 100px; height: 100px; border-radius: 10px;" src="assets/images/logo.png" alt="">
+</div>
+<p class="title">Ingresa a KOOC</p>
+
 <form [formGroup]="formLogin" (submit)="login()">
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <label for="exampleInputEmail1" class="form-label">Correo Electronico</label>
     <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1"
       aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+    <input type="password" formControlName="password" placeholder="**********" class="form-control" id="exampleInputPassword1">
   </div>
   <button type="submit" class="btn btn-primary">Ingresar</button>
 </form>
