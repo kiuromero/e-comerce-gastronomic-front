@@ -7,10 +7,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DetailVideosComponent } from './detail-videos/detail-videos.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent,    
   ],
   imports: [
     BrowserModule,

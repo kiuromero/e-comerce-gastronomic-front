@@ -9,10 +9,21 @@ const routes: Routes = [
       .then(m => m.AuthModule),
   },
   {
+    path: 'detail-category/:id',
+    loadChildren: () => import('./detail-category/detail-category.module')
+      .then(m => m.DetailCategoryModule),
+  },
+  {
+    path: 'detail-videos/:id',
+    loadChildren: () => import('./detail-videos/detail-videos.module')
+      .then(m => m.DetailVideosModule),
+  },
+  {
     path: '**',
     loadChildren: () => import('./home/home.module')
       .then(m => m.HomeModule),
   },
+  
 ];
 
 @NgModule({

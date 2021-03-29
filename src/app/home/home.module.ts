@@ -24,6 +24,7 @@ import { LoginComponent } from '../auth/login/login.component';
   ],
   providers: [],
   bootstrap: [MainHomeComponent],
+  exports : [NavBarComponent]
   
 })
 export class HomeModule { }
