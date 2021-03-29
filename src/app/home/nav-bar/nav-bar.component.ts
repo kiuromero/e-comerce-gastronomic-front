@@ -18,10 +18,16 @@ export class NavBarComponent implements OnInit {
   }
 
   openLogin() {
-    this.dialog.open(LoginComponent);
+    this.dialog.open(LoginComponent, {
+      height: 'auto',
+      width: '400px',
+    });
   }
 
   openRegister(){
-    this.dialog.open(RegisterComponent);
+    this.dialog.open(RegisterComponent, {
+      height: 'auto',
+      width: '400px',     
+    });
   }
 }
