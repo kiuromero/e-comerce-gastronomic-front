@@ -41,7 +41,7 @@ export class DetailVideosComponent implements OnInit {
       tax_base: "0",
       tax: "0",
       country: "co",
-      lang: "en",
+      lang: "es",
 
       //Onpage="false" - Standard="true"
       external: "false",
@@ -62,7 +62,7 @@ export class DetailVideosComponent implements OnInit {
       number_doc_billing: "100000000",
 
       //atributo deshabilitación metodo de pago
-      //methodsDisable: ["TDC", "PSE", "SP", "CASH", "DP"]
+      methodsDisable: ["SP", "CASH", "DP"]
 
     }
     handler.open(data);
