@@ -7,6 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MainHomeComponent } from './main-home/main-home.component';
 import {HomeRoutingModule} from './home-routing.module'
 import { LoginComponent } from '../auth/login/login.component';
+import { CarouselComponent } from './carousel/carousel.component';
 @NgModule({
   declarations: [
     NavBarComponent,
@@ -15,6 +16,7 @@ import { LoginComponent } from '../auth/login/login.component';
     FooterComponent,
     MainHomeComponent,
     SectionComponent,
+    CarouselComponent,
 
     //Angular Material    
   ],

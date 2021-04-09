@@ -1,0 +1,27 @@
+.carousel-item{
+    
+    max-width: 100%;
+    overflow: hidden;
+    height:90vh;
+    text-align: center;
+}
+.carousel-item img{
+    width: 100%;
+    height:90vh;
+}
+#slider-home {
+	margin-bottom: 50px;
+}
+.carousel-item img{
+    width: 330px;
+    height: 426px;
+}
+.carousel-control-prev{
+    left: -100px;
+    margin-bottom: 180px;
+}
+.carousel-control-next{
+    margin-bottom: 180px;
+    right:-100px;
+
+}
