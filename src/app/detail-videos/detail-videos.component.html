@@ -1,11 +1,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
 <app-nav-bar></app-nav-bar>
 <!-- Page Content -->
-    <div class="contprimero" >
-  <!--div class="title">
-    <h2 class="titlesction">¡Bienvenido al Curso de Gastronomía! </h2>
-  </div-->
-  <img class="card-img-top img-fluid" src="assets/images/platouno.png" alt="">
+<div class="container">
+  <div class="title">
+    <h2 class="title-section">¡Bienvenido al Curso de Gastronomía!</h2>
   </div>
   <div class="container">
     <div class="row">
@@ -49,53 +47,40 @@
   </div>
     </div>
   <div class="row">
-    <div class="col-lg-12">
-      <hr>
-      <div class="card mt-4">
+    <div class="col-lg-12" >
+      <div class="card mt-4" style="border-radius: 10px;box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2)">
+        <img
+          class="card-img-top img-fluid"
+          src="{{imageProduct}}"
+          alt=""
+          style="border-radius: 10px 10px 0 0;"
+        />
         <div class="card-body">
-          <h3 class="card-title">Bandeja Paisa</h3>
-          <h4>$24.99</h4>
-          <p class="card-text">Bandeja Paisa es una comida tradicional de la región Paisa de Colombia, que incluye las
-            ciudades de Medellín, Santa Fe de Antioquia, Guatape y Jardín. De hecho, es tan querida que ha sido adoptada
-            como plato nacional de Colombia. Esta abundante comida usualmente contiene arroz blanco, frijoles rojos,
-            carne molida o picada, plátano, chorizo, maíz, chicharrón de cerdo, huevo frito, arepa y un aguacate.
-
-            Los ingredientes pueden variar de una ciudad a otra y de un restaurante a otro, añadiendo o quitando ciertos
-            ingredientes. El tamaño de la porción también puede variar entre la comida completa y la mitad o un cuarto
-            del tamaño del plato tradicional.</p>
+          <h2 class="title-product">{{ nameProduct }}</h2>
+          <h4>$ {{ amount }}</h4>
+          <p class="card-text">{{ descriptionProduct }}</p>
         </div>
       </div>
       <!-- /.card -->
-
-
-
     </div>
     <!-- /.col-lg-9 -->
-
   </div>
   <div class="row">
     <div class="col-lg-9">
-      <div class="card card-outline-secondary my-4">
-        <div class="card-header">
-          Contenido del Curso
+      <div class="card card-outline-secondary my-4" style="border-radius: 10px; box-shadow:0 2px 2px rgba(0, 0, 0, 0.2);">
+        <div class="card-header">Contenido del Curso</div>
+        <div class="card-body" style="padding-top: 15px; padding-bottom: 0;" *ngFor="let classProduct of class_product">
+          <p>{{ classProduct.title }}</p>
+          <small class="text-muted">{{ classProduct.detail }}</small>
+          <hr />
         </div>
-        <div class="card-body">
-          <p>Presentación del Curso</p>
-          <small class="text-muted">Duración : 3 Días</small>
-          <hr>
-          <p>Historia del Plato</p>
-          <small class="text-muted">Duración : 3 Días</small>
-          <hr>
-          <p>Ingredientes Principales</p>
-          <small class="text-muted">Duración : 3 Días</small>
-          <hr>
-          <a (click)="pay()" class="btn btn-primary">Comprar</a>
+        <div class="card-body" style="text-align: right;">
+          <a (click)="pay()" class="btn btn-primary">Inscríbete por <strong> {{amount | currency : 'COP'}}</strong></a>
         </div>
       </div>
       <!-- /.card -->
     </div>
   </div>
-
 </div>
 <!-- /.container -->
 <app-footer></app-footer>
