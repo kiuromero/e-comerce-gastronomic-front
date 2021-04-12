@@ -1,5 +1,6 @@
 import { Route } from '@angular/compiler/src/core';
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../core/services/product.service';
 declare const ePayco: any;
@@ -9,13 +10,15 @@ declare const ePayco: any;
   templateUrl: './detail-videos.component.html',
   styleUrls: ['./detail-videos.component.scss']
 })
-export class DetailVideosComponent implements OnInit { 
+export class DetailVideosComponent implements OnInit {
   class_product = [];
   nameProduct;
   descriptionProduct;
   amount;
   imageProduct;
-  constructor(private productService: ProductService, private activatedRoute: ActivatedRoute) {
+  urlVideoProduct;
+  constructor(private productService: ProductService, private activatedRoute: ActivatedRoute,
+    private sanitizer: DomSanitizer) {
     let id = this.activatedRoute.snapshot.paramMap.get('id');
     console.log(id);
     this.getProductsById(id);
@@ -81,20 +84,19 @@ export class DetailVideosComponent implements OnInit {
 
   getProductsById(idProduct) {
     this.productService.getProductsById(idProduct).subscribe(
-      (res) => {
-        console.log(res);
+      (res) => {       
         this.nameProduct = res.data[0].name;
         this.descriptionProduct = res.data[0].description;
         this.amount = res.data[0].amount;
         this.imageProduct = res.data[0].image;
+        this.urlVideoProduct = this.transformUrl(res.data[0].url_video);
         this.class_product = res.data.map((obj) => {
-          return {           
+          return {
             description: obj.description,
             title: obj.class_title,
             detail: obj.class_detail,
           };
-        });
-        console.log(this.class_product)
+        });      
       },
       (error) => {
         console.log(error);
@@ -102,5 +104,8 @@ export class DetailVideosComponent implements OnInit {
     );
   }
 
+  transformUrl(url) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
 
 }

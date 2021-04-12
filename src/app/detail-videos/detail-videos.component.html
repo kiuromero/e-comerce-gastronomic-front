@@ -11,76 +11,75 @@
         <div class="instructor">
           <img src="assets/images/instructor.jpg" alt="">
         </div>
-    </div>
-    <section class="col-lg-4">
-      <div class="perfil">
-        <h3 class="instructor__title">
-          Bogota
-        </h3>
+      </div>
+      <section class="col-lg-4">
+        <div class="perfil">
+          <h3 class="instructor__title">
+            Bogota
+          </h3>
+          <p class="instructor__name">
+            Maria José San Román
+          </p>
+
+        </div>
+        <hr>
         <p class="instructor__name">
-          Maria José San Román
+          Epecialista en Postres
         </p>
-        
+        <p class="text-justify">Innovación y tradición mediterránea en el arroz
+          Aprende con la chef María José San Román, cocinera Michelin de Alicante especializada en
+          arroces y aceite de oliva, a conseguir las cocciones perfectas y deliciosos sabores en tus
+          arroces. Explora las diferentes elaboraciones más allá de la paella tradicional, arroces secos,
+          melosos y caldosos con todas sus posibilidades, sus sabores y su ejecución impecable.
+          A través de 7 recetas protagonizadas por el arroz, en este curso de arroces online
+          aprenderás cómo la medición tanto en las bases como en la cocción y elección del grano,
+          convertirá tu arroz en "EL" arroz. ¡Deja atrás la simple paella y exhibe al gourmet
+          que llevas dentro!</p>
+      </section>
+      <div class="col-lg-6">
+        <div class="promovideo">
+          <iframe width="520" height="315" [src]="urlVideoProduct" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen style="border-radius: 10px;">
+          </iframe>
+        </div>
       </div>
-      <hr>
-      <p class="instructor__name">
-        Epecialista en Postres
-      </p>
-      <p class="text-justify">Innovación y tradición mediterránea en el arroz
-      Aprende con la chef María José San Román, cocinera Michelin de Alicante especializada en 
-      arroces y aceite de oliva, a conseguir las cocciones perfectas y deliciosos sabores en tus
-       arroces. Explora las diferentes elaboraciones más allá de la paella tradicional, arroces secos, 
-       melosos y caldosos con todas sus posibilidades, sus sabores y su ejecución impecable. 
-      A través de 7 recetas protagonizadas por el arroz, en este curso de arroces online
-       aprenderás cómo la medición tanto en las bases como en la cocción y elección del grano, 
-       convertirá tu arroz en "EL" arroz. ¡Deja atrás la simple paella y exhibe al gourmet 
-       que llevas dentro!</p>
-    </section>
-    <div class="col-lg-6">
-      <div class="promovideo">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/VVNb9MAT-1Q" 
-        title="YouTube video player" frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen style="border-radius: 10px;">
-      </iframe>
-      </div>
-  </div>
     </div>
-  <div class="row">
-    <div class="col-lg-12" >
-      <div class="card mt-4" style="border-radius: 10px;box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2)">
-        <img
-          class="card-img-top img-fluid"
-          src="{{imageProduct}}"
-          alt=""
-          style="border-radius: 10px 10px 0 0;"
-        />
-        <div class="card-body">
-          <h2 class="title-product">{{ nameProduct }}</h2>
-          <h4>$ {{ amount }}</h4>
-          <p class="card-text">{{ descriptionProduct }}</p>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card mt-4" style="border-radius: 10px;box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2)">
+          <img class="card-img-top img-fluid" src="{{imageProduct}}" alt="" style="border-radius: 10px 10px 0 0;" />
+          <div class="card-body">
+            <h2 class="title-product">{{ nameProduct }}</h2>
+            <h4>$ {{ amount }}</h4>
+            <p class="card-text">{{ descriptionProduct }}</p>
+          </div>
         </div>
+        <!-- /.card -->
       </div>
-      <!-- /.card -->
+      <!-- /.col-lg-9 -->
     </div>
-    <!-- /.col-lg-9 -->
-  </div>
-  <div class="row">
-    <div class="col-lg-9">
-      <div class="card card-outline-secondary my-4" style="border-radius: 10px; box-shadow:0 2px 2px rgba(0, 0, 0, 0.2);">
-        <div class="card-header">Contenido del Curso</div>
-        <div class="card-body" style="padding-top: 15px; padding-bottom: 0;" *ngFor="let classProduct of class_product">
-          <p>{{ classProduct.title }}</p>
-          <small class="text-muted">{{ classProduct.detail }}</small>
-          <hr />
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card card-outline-secondary my-4"
+          style="border-radius: 10px; box-shadow:0 2px 2px rgba(0, 0, 0, 0.2);">
+          <div class="card-header">Contenido del Curso</div>
+          <div class="card-body" style="padding-top: 15px; padding-bottom: 0;"
+            *ngFor="let classProduct of class_product">
+            <p>{{ classProduct.title }}</p>
+            <small class="text-muted">{{ classProduct.detail }}</small>
+            <hr />
+          </div>
+          <div class="card-body" style="text-align: right;">
+            <a (click)="pay()" class="btn btn-primary">Inscríbete por <strong> {{amount | currency :
+                'COP'}}</strong></a>
+          </div>
         </div>
-        <div class="card-body" style="text-align: right;">
-          <a (click)="pay()" class="btn btn-primary">Inscríbete por <strong> {{amount | currency : 'COP'}}</strong></a>
-        </div>
+        <!-- /.card -->
       </div>
-      <!-- /.card -->
     </div>
   </div>
 </div>
-<!-- /.container -->
-<app-footer></app-footer>
+  <!-- /.container -->
+  <app-footer></app-footer>
