@@ -7,6 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MainHomeComponent } from './main-home/main-home.component';
 import {HomeRoutingModule} from './home-routing.module'
 import { LoginComponent } from '../auth/login/login.component';
+import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [
     NavBarComponent,
@@ -20,7 +21,8 @@ import { LoginComponent } from '../auth/login/login.component';
   ],
   entryComponents : [LoginComponent],
   imports: [    
-    HomeRoutingModule    
+    HomeRoutingModule,
+    CommonModule    
   ],
   providers: [],
   bootstrap: [MainHomeComponent],

@@ -1,4 +1,7 @@
+import { Route } from '@angular/compiler/src/core';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ProductService } from '../core/services/product.service';
 declare const ePayco: any;
 
 @Component({
@@ -6,9 +9,16 @@ declare const ePayco: any;
   templateUrl: './detail-videos.component.html',
   styleUrls: ['./detail-videos.component.scss']
 })
-export class DetailVideosComponent implements OnInit {
-
-  constructor() {
+export class DetailVideosComponent implements OnInit { 
+  class_product = [];
+  nameProduct;
+  descriptionProduct;
+  amount;
+  imageProduct;
+  constructor(private productService: ProductService, private activatedRoute: ActivatedRoute) {
+    let id = this.activatedRoute.snapshot.paramMap.get('id');
+    console.log(id);
+    this.getProductsById(id);
     this.loadScript();
   }
 
@@ -33,11 +43,11 @@ export class DetailVideosComponent implements OnInit {
 
     const data = {
       //Parametros compra (obligatorio)
-      name: "Curso de Gastronomia",
-      description: "Curso de bandeja paisa",
+      name: this.nameProduct,
+      description: this.descriptionProduct,
       invoice: Math.random(),
       currency: "cop",
-      amount: "12000",
+      amount: this.amount,
       tax_base: "0",
       tax: "0",
       country: "co",
@@ -68,5 +78,29 @@ export class DetailVideosComponent implements OnInit {
     handler.open(data);
 
   }
+
+  getProductsById(idProduct) {
+    this.productService.getProductsById(idProduct).subscribe(
+      (res) => {
+        console.log(res);
+        this.nameProduct = res.data[0].name;
+        this.descriptionProduct = res.data[0].description;
+        this.amount = res.data[0].amount;
+        this.imageProduct = res.data[0].image;
+        this.class_product = res.data.map((obj) => {
+          return {           
+            description: obj.description,
+            title: obj.class_title,
+            detail: obj.class_detail,
+          };
+        });
+        console.log(this.class_product)
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
+
 
 }

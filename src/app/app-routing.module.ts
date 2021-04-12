@@ -9,7 +9,7 @@ const routes: Routes = [
       .then(m => m.AuthModule),
   },
   {
-    path: 'detail-category/:id',
+    path: 'detail-category/:id/:name',
     loadChildren: () => import('./detail-category/detail-category.module')
       .then(m => m.DetailCategoryModule),
   },

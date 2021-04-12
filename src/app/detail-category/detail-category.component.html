@@ -2,101 +2,18 @@
 <app-slider></app-slider>
 <div class="container">
     <div class="title">
-        <h2 class="titlesction"> Últimos Cursos de Gastronomía </h2>
+        <h2 class="title-section"> Últimos Cursos de {{nameCategory}} </h2>
     </div>
-
     <div class="row">
-        <div class="col-md-4 mb-5">
+        <div class="col-md-4 mb-5" *ngFor="let product of products">
             <div class="carduno">
-                <img class="img-fluid rounded mb-4 mb-lg-0" src="assets/images/platouno.png" alt="">
+                <img class="img-fluid rounded mb-4 mb-lg-0" style="height: 200px; width: auto;" src="{{product.image}}" alt="">
                 <div class="card-body">
-                    <h2 class="card-title">Bandeja Paisa</h2>
-                    <p class="card-text">Esta abundante comida usualmente contiene arroz blanco, frijoles rojos, carne
-                        molida o picada, plátano, chorizo, maíz, chicharrón de cerdo, huevo frito, arepa y un aguacate.
-                    </p>
+                    <h2 class="title-product">{{product.name}}</h2>
+                    <p class="card-text">{{product.description}}</p>
                 </div>
                 <div class="card-footer">
-                    <a [routerLink]="['/','detail-videos', 1]" class="btn btn-primary btn-sm">Ver Mas</a>
-                </div>
-            </div>
-        </div>
-        <!-- /.col-md-4 -->
-
-        <div class="col-md-4 mb-5">
-            <div class="carduno">
-                <img class="img-fluid rounded mb-4 mb-lg-0" src="assets/images/platouno.png" alt="">
-                <div class="card-body">
-                    <h2 class="card-title">Bandeja Paisa</h2>
-                    <p class="card-text">Esta abundante comida usualmente contiene arroz blanco, frijoles rojos, carne
-                        molida o picada, plátano, chorizo, maíz, chicharrón de cerdo, huevo frito, arepa y un aguacate.
-                    </p>
-                </div>
-                <div class="card-footer">
-                    <a [routerLink]="['/','detail-videos', 1]" class="btn btn-primary btn-sm">Ver Mas</a>
-                </div>
-            </div>
-        </div>
-        <!-- /.col-md-4 -->
-
-        <div class="col-md-4 mb-5">
-            <div class="carduno">
-                <img class="img-fluid rounded mb-4 mb-lg-0" src="assets/images/platouno.png" alt="">
-                <div class="card-body">
-                    <h2 class="card-title">Bandeja Paisa</h2>
-                    <p class="card-text">Esta abundante comida usualmente contiene arroz blanco, frijoles rojos, carne
-                        molida o picada, plátano, chorizo, maíz, chicharrón de cerdo, huevo frito, arepa y un aguacate.
-                    </p>
-                </div>
-                <div class="card-footer">
-                    <a [routerLink]="['/','detail-videos', 1]" class="btn btn-primary btn-sm">Ver Mas</a>
-                </div>
-            </div>
-        </div>
-        <!-- /.col-md-4 -->
-
-        <div class="col-md-4 mb-5">
-            <div class="carduno">
-                <img class="img-fluid rounded mb-4 mb-lg-0" src="assets/images/platouno.png" alt="">
-                <div class="card-body">
-                    <h2 class="card-title">Bandeja Paisa</h2>
-                    <p class="card-text">Esta abundante comida usualmente contiene arroz blanco, frijoles rojos, carne
-                        molida o picada, plátano, chorizo, maíz, chicharrón de cerdo, huevo frito, arepa y un aguacate.
-                    </p>
-                </div>
-                <div class="card-footer">
-                    <a [routerLink]="['/','detail-videos', 1]" class="btn btn-primary btn-sm">Ver Mas</a>
-                </div>
-            </div>
-        </div>
-        <!-- /.col-md-4 -->
-
-        <div class="col-md-4 mb-5">
-            <div class="carduno">
-                <img class="img-fluid rounded mb-4 mb-lg-0" src="assets/images/platouno.png" alt="">
-                <div class="card-body">
-                    <h2 class="card-title">Bandeja Paisa</h2>
-                    <p class="card-text">Esta abundante comida usualmente contiene arroz blanco, frijoles rojos, carne
-                        molida o picada, plátano, chorizo, maíz, chicharrón de cerdo, huevo frito, arepa y un aguacate.
-                    </p>
-                </div>
-                <div class="card-footer">
-                    <a [routerLink]="['/','detail-videos', 1]" class="btn btn-primary btn-sm">Ver Mas</a>
-                </div>
-            </div>
-        </div>
-        <!-- /.col-md-4 -->
-
-        <div class="col-md-4 mb-5">
-            <div class="carduno">
-                <img class="img-fluid rounded mb-4 mb-lg-0" src="assets/images/platouno.png" alt="">
-                <div class="card-body">
-                    <h2 class="card-title">Bandeja Paisa</h2>
-                    <p class="card-text">Esta abundante comida usualmente contiene arroz blanco, frijoles rojos, carne
-                        molida o picada, plátano, chorizo, maíz, chicharrón de cerdo, huevo frito, arepa y un aguacate.
-                    </p>
-                </div>
-                <div class="card-footer">
-                    <a [routerLink]="['/','detail-videos', 1]" class="btn btn-primary btn-sm">Ver Mas</a>
+                    <a [routerLink]="['/','detail-videos', product.id]" class="btn btn-primary btn-sm">Ver Mas</a>
                 </div>
             </div>
         </div>
