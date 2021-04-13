@@ -1,10 +1,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
 <app-nav-bar></app-nav-bar>
 <!-- Page Content -->
-<div class="container">
-  <div class="title">
-    <h2 class="title-section">¡Bienvenido al Curso de Gastronomía!</h2>
+<div class="contcabezado" >
+  <img class="card-img-top img-fluid"  src="{{imageProduct}}" style="border-radius: 10px 10px 0 0;"/>
+  <div class="carousel-caption">
+  <h2>{{nameProduct}}</h2>
+  <div class="card-body">
+    <a (click)="pay()" class="btn btn-outline-secondary">Inscribete Por <strong> {{amount | currency :
+        'COP'}}</strong></a>
   </div>
+  </div>
+
+  </div>
+<div class="container">
+  <!--div class="title">
+    <h2 class="title-section">¡Bienvenido al Curso de Gastronomía!</h2>
+  </div-->
   <div class="container">
     <div class="row">
       <div class="col-lg-2">
@@ -49,7 +60,6 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="card mt-4" style="border-radius: 10px;box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2)">
-          <img class="card-img-top img-fluid" src="{{imageProduct}}" alt="" style="border-radius: 10px 10px 0 0;" />
           <div class="card-body">
             <h2 class="title-product">{{ nameProduct }}</h2>
             <h4>$ {{ amount }}</h4>
