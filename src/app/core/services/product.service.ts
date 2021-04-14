@@ -12,7 +12,7 @@ export class ProductService {
   getProductsByCategory(idCategory) {
     const headers = new HttpHeaders()
       .set('Content-Type', 'application/json');
-    return this.http.get<any>(environment.apiUrl + '/product/' + idCategory, { headers });
+    return this.http.get<any>(environment.apiUrl + '/product-category/' + idCategory, { headers });
   }
 
   getProductsById(idProduct) {

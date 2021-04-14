@@ -23,10 +23,10 @@ export class DetailCategoryComponent implements OnInit {
 
   getProductsByCategory(idCategory) {
     this.productService.getProductsByCategory(idCategory).subscribe(
-      (res) => { console.log(res);      
+      (res) => { console.log(res);           
         this.products = res.data.map((obj) => {
           return {
-            id: obj.id_pruduct,
+            id: obj.id_product,
             name: obj.name,
             image: obj.image,
             description : obj.description
