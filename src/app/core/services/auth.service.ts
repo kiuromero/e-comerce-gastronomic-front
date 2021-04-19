@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Output, EventEmitter } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -6,7 +6,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class AuthService {
-
+  @Output() closeModalLogin: EventEmitter<any> = new EventEmitter();
+  @Output() closeModalRegister: EventEmitter<any> = new EventEmitter();
   constructor(private http: HttpClient, ) { }
 
   login(data: any){

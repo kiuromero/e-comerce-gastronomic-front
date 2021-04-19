@@ -32,6 +32,7 @@ export class LoginComponent implements OnInit {
     this.authService.login(data).subscribe(
       res => {       
         this.sesionStorageService.setItem(SesionStorageService.CURRENT_USER, res);
+        this.authService.closeModalLogin.emit(true);
       },
       error => { }
     );
