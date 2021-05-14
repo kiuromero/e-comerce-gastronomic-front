@@ -1,7 +1,17 @@
 .btn-primary{
-    background-color:#d57a34 ;
-    border-color: #d57a34;
+    background-color:#df8622  ;
+    border-color: #df8622;
     margin-bottom: 10px;
+}
+.btn-primary:hover {
+    background-color: rgba(108, 117, 125, 0.75);
+    border-color: white;
+}
+.nav-link:hover {
+    background-color: rgba(108, 117, 125, 0.75);
+    margin-right: 10px;
+    border-radius:  5px 20px 20px 5px;
+    border: solid;
 }
 
 .mat-dialog-container {
@@ -9,7 +19,19 @@
 }
 
 .btn-register{
-    background-color: #6c757d;
-    border-color: #6c757d;
+    background-color: #df8622 ;
+    border-color: #df8622 ;
     color: white;
+}
+.btn-register:hover {
+    background-color: rgba(108, 117, 125, 0.75);
+    border-color: white;
+}
+.navbar-brand{
+    position: absolute;
+    
+}
+.navbar-brand img{
+    margin-top: 8px;
+  margin-bottom: 10px;
 }
