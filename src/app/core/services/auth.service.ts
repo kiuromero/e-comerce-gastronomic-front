@@ -21,4 +21,10 @@ export class AuthService {
       .set('Content-Type', 'application/json');
     return this.http.post<any>(environment.apiUrl + '/login/login-user', obj, { headers });
   } */
+
+  register(data: any) {
+    const headers = new HttpHeaders()
+      .set('Content-Type', 'application/json');
+    return this.http.post<any>(environment.apiUrl + '/user/create', data, { headers });
+  }
 }
