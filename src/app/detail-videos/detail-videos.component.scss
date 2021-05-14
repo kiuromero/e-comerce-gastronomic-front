@@ -2,9 +2,32 @@
     margin-top: 100px !important;
 }
 
+.cajauno{
+    width: 500px;
+    height: 300px;
+    float: left;
+    text-align: center;
+    margin-bottom: 60px;
+   
+}
+.barra img{
+    margin-top: -140px;
+    margin-bottom: -140px;
+    opacity: 1;
+}
+
+.cajados{
+    width: 500px;
+    height: 300px;
+    float: left;
+    text-align: center;
+    margin-top: 30px;
+   
+}
+
 .btn-primary{
-    background-color:#d57a34 ;
-    border-color: #d57a34;
+    background-color:#df8622 ;
+    border-color: #df8622;
 }
 
 .title{
@@ -50,7 +73,7 @@
 .btn-outline-secondary {
     color:white;
     border-color: white;
-    background: rgba(213, 122, 52, 0.50);
+    background: rgba(223, 134, 34, 0.50);
 }
 .btn-outline-secondary:hover {
     background-color: rgba(108, 117, 125, 0.75);
@@ -65,13 +88,18 @@ margin-bottom: 70px;
 color: white;
 text-align: center;
 }
+.card-header{
+    background-color: #df8622;
+    color: white;
+    font-size: 20px;
+}
 .instructor img {
         height: 150px;
         width: 150px;
         position: relative;
         overflow: hidden;
         border-radius: 100px;
-        box-shadow: 0 2px 16px 0 rgb(0 0 0 / 10%);
+        box-shadow: 0 2px 16px 0 rgb(0 0 0 / 50%);
     }
 
 .instructor__title {
@@ -92,7 +120,7 @@ margin-top: 1.333em;
 margin-bottom:1.333em;
 }
 .promovideo{
-    margin-top: 50px;
+    text-align: center;
 }
 
 
