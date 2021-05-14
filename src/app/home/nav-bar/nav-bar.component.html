@@ -21,13 +21,26 @@
             <span class="sr-only">(current)</span>
           </a>
         </li>
-        <li class="nav-item" style="padding-right: 10px;">       
+        <li *ngIf="!logged" class="nav-item" style="padding-right: 10px;">       
          <button (click)="openRegister()" class="btn btn-register">Registrarme</button>
         </li>
-        <li class="nav-item">      
+        <li *ngIf="!logged" class="nav-item">      
           <button (click)="openLogin()" class="btn btn-primary">Ingresar</button>
         </li>
-      </ul>
+        <!-- menu profile user -->
+        <li *ngIf="logged" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="javascript:void(0)"  data-toggle="dropdown" 
+            aria-expanded="false">
+            Dashboard
+          </a>        
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="javascript:void(0)">Mis Cursos</a></li>           
+            <div class="dropdown-divider"></div>
+            <li><a class="dropdown-item" (click)="logout()" href="javascript:void(0)">Cerrar Sesión</a></li>
+          </ul>
+        </li>
+        <!--  -->
+      </ul>      
     </div>
   </div>
 </nav>
