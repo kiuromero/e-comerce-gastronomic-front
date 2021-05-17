@@ -19,6 +19,11 @@ const routes: Routes = [
       .then(m => m.DetailVideosModule),
   },
   {
+    path: 'profile-chef/:id',
+    loadChildren: () => import('./profile-chef/profile-chef.module')
+      .then(m => m.ProfileChefModule),
+  },
+  {
     path: '**',
     loadChildren: () => import('./home/home.module')
       .then(m => m.HomeModule),
