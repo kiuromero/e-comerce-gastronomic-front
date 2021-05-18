@@ -13,7 +13,8 @@ import { ProfileChefComponent } from './profile-chef.component';
   entryComponents : [LoginComponent],
   imports: [    
     ProfileChefRoutingModule,
-    CommonModule    
+    CommonModule,
+    HomeModule    
   ],
   providers: [],
   bootstrap: [],
