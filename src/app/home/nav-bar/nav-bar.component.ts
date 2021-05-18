@@ -13,21 +13,23 @@ import { SesionStorageService } from 'src/app/core/services/sesion-storage.servi
 })
 export class NavBarComponent implements OnInit {
   logged = false;
+  nameUser?;
   constructor(public dialog: MatDialog,
     private authService: AuthService,
     private sesionStorageService: SesionStorageService
   ) { }
 
   ngOnInit(): void {
-    let auth = sessionStorage.getItem('current_user');
-    console.log(auth)
+    let auth = sessionStorage.getItem('current_user');    
     if(auth){
        this.logged = true;
     }
     this.authService.closeModalLogin.subscribe(
       res => {
         this.dialog.closeAll();
-        this.logged = res;
+        this.logged = true;
+        this.nameUser = res.name + ' ' + res.last_name;
+
       }
     );
     this.authService.closeModalRegister.subscribe(
@@ -53,6 +55,7 @@ export class NavBarComponent implements OnInit {
 
   logout(){
     this.sesionStorageService.removeItem(SesionStorageService.CURRENT_USER);
-    this.authService.closeModalLogin.emit(false);
+    //this.authService.closeModalLogin.emit(false);
+    this.logged = false;
   }
 }

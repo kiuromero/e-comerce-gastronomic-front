@@ -1,64 +1,45 @@
 <div class="logo">
-  <img
-    style="width: 100px; height: 100px; border-radius: 10px"
-    src="assets/images/logo.png"
-    alt=""
-  />
+  <img style="width: 100px; height: 100px; border-radius: 10px" src="assets/images/logo.png" alt="" />
 </div>
 <p class="title">Registrate en KOOC</p>
-<form [formGroup]="formRegister" (submit)="register()"  novalidate>
-  <div class="input-group">    
-    <input type="text" aria-label="First name" class="form-control">
-    <input type="text" aria-label="Last name" class="form-control">
+<form [formGroup]="formRegister" (submit)="register()" novalidate>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Numero de Documento</label>
+    <select class="form-control" aria-label="Default select example" formControlName="docType" >     
+      <option value="CC">Cedula de Ciudadania</option>
+      <option value="PP">Pasaporte</option>
+      <option value="TI">Tarjeta de Identidad</option>
+    </select>
   </div>
   <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Numero de Documento</label>
+    <input formControlName="numberDocument" type="number" class="form-control" id="exampleFormControlInput1"
+      placeholder="Numero de Documento" />
+  </div>
+
+  <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Nombres</label>
-    <input
-      type="text"
-      class="form-control"
-      id="exampleFormControlInput1"
-      placeholder="Nombres"
-    />
+    <input formControlName="name" type="text" class="form-control" id="exampleFormControlInput1"
+      placeholder="Nombres" />
   </div>
   <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Apellidos</label>
-    <input
-      type="text"
-      class="form-control"
-      id="exampleFormControlInput1"
-      placeholder="Apellidos"
-    />
+    <input formControlName="lastName" type="text" class="form-control" id="exampleFormControlInput1"
+      placeholder="Apellidos" />
   </div>
   <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label"
-      >Correo Electronico</label
-    >
-    <input
-      type="email"
-      class="form-control"
-      id="exampleFormControlInput1"
-      placeholder="email@mail.com"
-    />
+    <label for="exampleFormControlInput1" class="form-label">Correo Electronico</label>
+    <input formControlName="email" type="email" class="form-control" id="exampleFormControlInput1"
+      placeholder="email@mail.com" />
   </div>
   <div class="mb-3">
     <label for="exampleFormControlInput1" class="form-label">Contraseña</label>
-    <input
-      type="password"
-      class="form-control"
-      id="exampleFormControlInput1"
-      placeholder="*********"
-    />
+    <input formControlName="password" type="password" class="form-control" id="exampleFormControlInput1"
+      placeholder="*********" />
   </div>
   <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label"
-      >Confirmar Contraseña</label
-    >
-    <input
-      type="password"
-      class="form-control"
-      id="exampleFormControlInput1"
-      placeholder="*********"
-    />
+    <label for="exampleFormControlInput1" class="form-label">Confirmar Contraseña</label>
+    <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="*********" />
   </div>
   <button type="submit" class="btn btn-primary">Registrarme</button>
 </form>
