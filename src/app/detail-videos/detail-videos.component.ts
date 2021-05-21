@@ -3,6 +3,10 @@ import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../core/services/product.service';
+import { LoginComponent } from 'src/app/auth/login/login.component';
+import { MatDialog } from '@angular/material/dialog';
+import { environment } from 'src/environments/environment';
+
 declare const ePayco: any;
 
 @Component({
@@ -17,8 +21,11 @@ export class DetailVideosComponent implements OnInit {
   amount;
   imageProduct;
   urlVideoProduct;
+  auth : any = [];
+  idUser?;
+  idProduct?;
   constructor(private productService: ProductService, private activatedRoute: ActivatedRoute,
-    private sanitizer: DomSanitizer) {
+    private sanitizer: DomSanitizer, public dialog: MatDialog) {
     let id = this.activatedRoute.snapshot.paramMap.get('id');
     console.log(id);
     this.getProductsById(id);
@@ -26,6 +33,11 @@ export class DetailVideosComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.auth = JSON.parse(sessionStorage.getItem('current_user'));
+
+    if (this.auth) {
+      this.idUser = this.auth.user.id_user;
+    }
   }
 
   public loadScript() {
@@ -38,53 +50,59 @@ export class DetailVideosComponent implements OnInit {
   }
 
   pay() {
+    this.auth = JSON.parse(sessionStorage.getItem('current_user'));
+    if (!this.auth) {
+      this.openLogin();
+    } else {
 
-    var handler = ePayco.checkout.configure({
-      key: '45b960805ced5c27ce34b1600b4b9f54',
-      test: true
-    });
+      var handler = ePayco.checkout.configure({
+        key: environment.epaycoCredentials.key,
+        test: true
+      });
 
-    const data = {
-      //Parametros compra (obligatorio)
-      name: this.nameProduct,
-      description: this.descriptionProduct,
-      invoice: Math.random(),
-      currency: "cop",
-      amount: this.amount,
-      tax_base: "0",
-      tax: "0",
-      country: "co",
-      lang: "es",
+      const data = {
+        //Parametros compra (obligatorio)
+        name: this.nameProduct,
+        description: this.descriptionProduct,
+        invoice: Math.random(),
+        currency: "cop",
+        amount: this.amount,
+        tax_base: "0",
+        tax: "0",
+        country: "co",
+        lang: "es",
 
-      //Onpage="false" - Standard="true"
-      external: "false",
+        //Onpage="false" - Standard="true"
+        external: "false",
 
 
-      //Atributos opcionales
-      extra1: "extra1",
-      extra2: "extra2",
-      extra3: "extra3",
-      confirmation: "http://secure2.payco.co/prueba_curl.php",
-      response: "http://secure2.payco.co/prueba_curl.php",
+        //Atributos opcionales
+        extra1: this.idUser,
+        extra2: this.idProduct,
+        confirmation: environment.urlConfirmation,
+        response: environment.urlResponse,
 
-      //Atributos cliente
-      name_billing: "Andres Perez",
-      address_billing: "Carrera 19 numero 14 91",
-      type_doc_billing: "cc",
-      mobilephone_billing: "3050000000",
-      number_doc_billing: "100000000",
+        //Atributos cliente
+        name_billing: "Andres Perez",
+        address_billing: "Carrera 19 numero 14 91",
+        type_doc_billing: "cc",
+        mobilephone_billing: "3050000000",
+        number_doc_billing: "100000000",
 
-      //atributo deshabilitación metodo de pago
-      methodsDisable: ["SP", "CASH", "DP"]
+        //atributo deshabilitación metodo de pago
+        methodsDisable: ["SP", "CASH", "DP"]
 
+      }
+      console.log(data)
+      handler.open(data);
     }
-    handler.open(data);
 
   }
 
   getProductsById(idProduct) {
     this.productService.getProductsById(idProduct).subscribe(
-      (res) => {       
+      (res) => {     
+        this.idProduct = res.data[0].id_product;  
         this.nameProduct = res.data[0].name;
         this.descriptionProduct = res.data[0].description;
         this.amount = res.data[0].amount;
@@ -106,6 +124,13 @@ export class DetailVideosComponent implements OnInit {
 
   transformUrl(url) {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
+
+  openLogin() {
+    this.dialog.open(LoginComponent, {
+      height: 'auto',
+      width: '400px',
+    });
   }
 
 }

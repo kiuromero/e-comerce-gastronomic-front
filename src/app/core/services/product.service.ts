@@ -20,4 +20,11 @@ export class ProductService {
       .set('Content-Type', 'application/json');
     return this.http.get<any>(environment.apiUrl + '/product-class/' + idProduct, { headers });
   }
+
+  getProductsByIdUser(idUser) {
+    const headers = new HttpHeaders()
+      .set('Content-Type', 'application/json');
+    return this.http.get<any>(environment.apiUrl + '/products-client/' + idUser, { headers });
+  }
+
 }

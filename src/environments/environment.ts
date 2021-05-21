@@ -4,7 +4,12 @@
 
 export const environment = {
   production: false,
-  apiUrl : 'http://127.0.0.1:8000/api'
+  apiUrl: 'http://127.0.0.1:8000/api',
+  epaycoCredentials: {
+    key: '45b960805ced5c27ce34b1600b4b9f54'
+  },
+  urlConfirmation : 'http://127.0.0.1:8000/api/webhook',
+  urlResponse : 'http://localhost:4200'
 };
 
 /*
