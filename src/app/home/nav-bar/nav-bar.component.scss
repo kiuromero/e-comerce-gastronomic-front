@@ -29,10 +29,15 @@
 }
 .navbar-brand{
     position: absolute;
-    padding:auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
     
 }
 .navbar-brand img{
-    margin-top: 8px;
+  margin-top: 8px;
   margin-bottom: 10px;
+}
+.navbar{
+background-color: black !important;
+height: 90px;
 }

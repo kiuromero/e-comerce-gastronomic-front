@@ -24,6 +24,11 @@ const routes: Routes = [
       .then(m => m.ProfileChefModule),
   },
   {
+    path: 'courses-client/:id',
+    loadChildren: () => import('./mycourses/mycourses.module')
+      .then(m => m.MyCoursesModule),
+  },
+  {
     path: '**',
     loadChildren: () => import('./home/home.module')
       .then(m => m.HomeModule),
