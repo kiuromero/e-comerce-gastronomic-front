@@ -14,7 +14,7 @@ const routes: Routes = [
       .then(m => m.DetailCategoryModule),
   },
   {
-    path: 'detail-videos/:id',
+    path: 'detail-course/:id',
     loadChildren: () => import('./detail-videos/detail-videos.module')
       .then(m => m.DetailVideosModule),
   },

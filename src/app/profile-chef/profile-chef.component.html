@@ -1,58 +1,47 @@
 <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
 <app-nav-bar></app-nav-bar>
-<!-- Page Content -->
- <!--  <div class="title">
-    <h2 class="title-section">¡Bienvenido al Curso de Gastronomía!</h2>
-  </div> -->
-    <!--div class="title">
-      <h2 class="title-section">¡Bienvenido al Curso de Gastronomía!</h2>
-    </div-->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="cajauno">
-          <div class="instructor">
-            <img src="assets/images/gilber.png" alt="">
-          </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="cajauno">
+        <div class="instructor">
+          <img src="{{profileChef.image}}" alt="">
         </div>
-        </div>    
-  
-  <div class="cajados" >
-  <section class="col-lg-12">
-          <div class="perfil">
-            <p class="instructor__name">
-              Gilberto Sanabria Grillot
-            </p>
-          </div>
-          <hr>
-          <h3 class="instructor__title">
-            Ingeniero y Tecnólogo de Alimentos
-          </h3>
-          <p class="text-justify">Docente de panificación y especialista en ciencias
-             de la panificación, con una amplia trayectoria laboral como asesor técnico nacional en Team Foods, 
-             Oleoflores, extenso recorrido como instructor  en varias instituciones reconocidas como SENA, 
-             FUNDACION UNIVERSITARIA DEL AREA ANDINA, POLITECNICO INTERNACIONAL, INSTUTUTO SUPERIOR MARIANO MORENO, VERDE OLIVA,
-              ICPP, IGI, entre otros.</p>
-        </section>
+      </div>
+    </div>
+
+    <div class="cajados">
+      <section class="col-lg-12">
+        <div class="perfil">
+          <p class="instructor__name">
+            {{profileChef.name}}
+          </p>
+        </div>
+        <hr>
+        <h3 class="instructor__title">
+          {{profileChef.profession}}
+        </h3>
+        <p class="text-justify"> {{profileChef.description}}</p>
+      </section>
+    </div>
   </div>
-    </div>
-    <div class="title">
-        <h2 class="title-section">Cursos con Gilberto Sanabria </h2>
-    </div>
-    <div class="row">
-        <div class="col-md-4 mb-5">
-            <div class="carduno">
-                <img class="img-fluid rounded mb-4 mb-lg-0" style="height: 200px; width: 400px;" src="{{product.image}}" alt="">
-                <div class="card-body">
-                    <h2 class="title-product">Amasijo Colombiano</h2>
-                    <p class="card-text">Este taller te dara el conocimiento general de los ingredientes y procesos para elaborar los productos de siempre y los
-                       cuales nosotros los colombianos tenemos como punto de referencia</p>
-                </div>
-                <div class="card-footer">
-                    <a [routerLink]="['/','detail-videos', product.id]" class="btn btn-primary btn-sm">Ver Mas</a>
-                </div>
+  <div class="title">
+    <h2 class="title-section">Cursos con  {{profileChef.name}} </h2>
+  </div>
+  <div class="row">
+    <div class="col-md-4 mb-5" *ngFor="let chef of chefs">
+        <div class="carduno">
+            <img class="img-fluid rounded mb-4 mb-lg-0" style="height: 200px; width: 400px;" src="{{chef.image}}" alt="">
+            <div class="card-body">
+                <h2 class="title-chef">{{chef.name}}</h2>
+                <p class="card-text">{{chef.description}}</p>
+            </div>
+            <div class="card-footer">
+                <a [routerLink]="['/','detail-course', chef.id]" class="btn btn-primary btn-sm">Ver Mas</a>
             </div>
         </div>
-        <!-- /.col-md-4 -->
     </div>
-  </div>
+    <!-- /.col-md-4 -->
+</div>
+</div>
