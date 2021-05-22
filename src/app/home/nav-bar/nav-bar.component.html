@@ -27,6 +27,9 @@
         <li *ngIf="!logged" class="nav-item">      
           <button (click)="openLogin()" class="btn btn-primary">Ingresar</button>
         </li>
+        <li *ngIf="!logged" class="nav-item"[routerLink]="['/','message',1]">      
+          <button (click)="openLogin()" class="btn btn-primary">Chat</button>
+        </li>
         <!-- menu profile user -->
         <li *ngIf="logged" class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="javascript:void(0)"  data-toggle="dropdown" 
