@@ -64,7 +64,7 @@ export class DetailVideosComponent implements OnInit {
         //Parametros compra (obligatorio)
         name: this.nameProduct,
         description: this.descriptionProduct,
-        invoice: Math.random(),
+        invoice: btoa(this.idUser + ':' + this.idProduct + ':' + Math.floor(Date.now() / 1000)),//Math.random()* 1000,
         currency: "cop",
         amount: this.amount,
         tax_base: "0",
