@@ -2,9 +2,12 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <div class="row">
-        <div class="col-lg-4" *ngFor="let chef of chefs">
+        <div class="carduno" *ngFor="let chef of chefs">
           <img [routerLink]="['/','profile-chef', chef.id ]" src="{{chef.image}}" alt="">
-        </div>       
+        <div class="card-body">
+          <h5 class="titlesction">hola</h5>
+        </div>
+        </div>   
       </div>
     </div>   
     
