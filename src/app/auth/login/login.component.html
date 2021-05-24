@@ -1,3 +1,7 @@
+<link type="text/css" rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+  integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
 <div class="logo">
   <img style="width: 100px; height: 100px; border-radius: 10px;" src="assets/images/logo.png" alt="">
 </div>
@@ -9,9 +13,12 @@
     <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1"
       aria-describedby="emailHelp">
   </div>
-  <div class="mb-3">
+  <div class="form-group mb-3">
     <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-    <input type="password" formControlName="password" placeholder="**********" class="form-control" id="exampleInputPassword1">
+    <input [type]="showPassword ? 'text' : 'password'" formControlName="password" placeholder="**********"
+      class="form-control" id="exampleInputPassword1">
+    <span (click)="password()"
+      [class]=" showPassword ? 'fa fa-fw fa-eye password-icon show-password' : 'fa fa-fw fa-eye-slash password-icon show-password'"></span>
   </div>
   <button type="submit" class="btn btn-primary">Ingresar</button>
 </form>

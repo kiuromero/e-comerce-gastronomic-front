@@ -1,16 +1,23 @@
-.title{
-    font-size: 20px;
-    text-align: center;
-    font-weight: 500;
+.title {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 500;
 }
 
-.logo{
-    text-align: center;
-    margin-top: 120px;
-    border: solid;
+.logo {
+  text-align: center;
+  //margin-top: 120px;
+  //border: solid;
 }
 
-.btn-primary{
-    background-color:#d57a34 ;
-    border-color: #d57a34;
+.btn-primary {
+  background-color: #d57a34;
+  border-color: #d57a34;
+}
+
+.password-icon {
+  float: right;
+  position: relative;
+  margin: -25px 10px 0 0;
+  cursor: pointer;
 }

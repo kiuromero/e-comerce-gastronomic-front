@@ -1,49 +1,42 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
+  <div class="container px-4 px-lg-5">
     <a class="navbar-brand" [routerLink]="['/']">
       <img src="assets/images/logob.png" alt=""></a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarResponsive"
-      aria-controls="navbarResponsive"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="nav-link" [routerLink]="['/']"
-            >Home
+          <a class="nav-link" [routerLink]="['/']">Home
             <span class="sr-only">(current)</span>
           </a>
         </li>
-        <li *ngIf="!logged" class="nav-item" style="padding-right: 10px;">       
-         <button (click)="openRegister()" class="btn btn-register">Registrarme</button>
+        <li *ngIf="!logged" class="nav-item" style="padding-right: 10px;">
+          <button (click)="openRegister()" class="btn btn-primary">Registrarme</button>
         </li>
-        <li *ngIf="!logged" class="nav-item">      
+        <li *ngIf="!logged" class="nav-item">
           <button (click)="openLogin()" class="btn btn-primary">Ingresar</button>
         </li>
-        <li *ngIf="!logged" class="nav-item"[routerLink]="['/','message',1]">      
+       <!--  <li *ngIf="!logged" class="nav-item" [routerLink]="['/','message',1]">
           <button (click)="openLogin()" class="btn btn-primary">Chat</button>
-        </li>
+        </li> -->
         <!-- menu profile user -->
         <li *ngIf="logged" class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="javascript:void(0)"  data-toggle="dropdown" 
-            aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown" aria-expanded="false">
             <strong>{{nameUser}}</strong>
-          </a>        
+          </a>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <li><a class="dropdown-item" [routerLink]="['/','courses-client',idUser]" href="javascript:void(0)">Mis Cursos</a></li>           
+            <li><a class="dropdown-item" [routerLink]="['/','courses-client',idUser]" href="javascript:void(0)">Mis
+                Cursos</a></li>
             <div class="dropdown-divider"></div>
             <li><a class="dropdown-item" (click)="logout()" href="javascript:void(0)">Cerrar Sesión</a></li>
           </ul>
         </li>
         <!--  -->
-      </ul>      
+      </ul>
     </div>
   </div>
 </nav>

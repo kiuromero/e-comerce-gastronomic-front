@@ -12,7 +12,8 @@ import Swal from 'sweetalert2'
 export class LoginComponent implements OnInit {
 
   formLogin: FormGroup;
-
+  showPassword : boolean = false;
+  
   constructor(private fb: FormBuilder,
     private authService: AuthService,
     private sesionStorageService: SesionStorageService) { }
@@ -59,5 +60,9 @@ export class LoginComponent implements OnInit {
          }
       );
     }
+  }
+
+  password() {
+    this.showPassword = !this.showPassword;
   }
 }
