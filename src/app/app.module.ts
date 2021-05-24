@@ -9,9 +9,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LazyLoadImageModule, LAZYLOAD_IMAGE_HOOKS, ScrollHooks } from 'ng-lazyload-image';
 
+
 @NgModule({
   declarations: [
-    AppComponent,   
+    AppComponent,
+       
   ],
   imports: [
     BrowserModule,
