@@ -2,6 +2,7 @@
     background-color:#df8622  ;
     border-color: #df8622;
     margin-bottom: 10px;
+    width: 115px;
 }
 .btn-primary:hover {
     background-color: rgba(108, 117, 125, 0.75);
@@ -27,17 +28,35 @@
     background-color: rgba(108, 117, 125, 0.75);
     border-color: white;
 }
-/* .navbar-brand{
-    position: absolute;
+.navbar-brand{
     margin-top: 10px;
     margin-bottom: 10px;
     
-} */
+} 
+@media (max-width:1000px) {
+  .navbar-brand {
+margin-top: -35px;
+  }
+  .navbar-dark .navbar-toggler:hover {
+    background-color: rgba(108, 117, 125, 0.75);
+    border-color: white;
+}
+  .nav-link:hover {
+    margin-bottom: 10px;
+    width: 115px;
+}
+}
+.navbar-dark .navbar-toggler {
+    color: rgba(255,255,255,.5);
+ border-color: rgba(255,255,255,.1);
+ margin-top: -35px;
+}
+
 .navbar-brand img{
   margin-top: 8px;
   margin-bottom: 10px;
 }
 .navbar{
 background-color: black !important;
-//height: 90px;
+height: 70px
 }

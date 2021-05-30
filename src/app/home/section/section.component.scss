@@ -1,20 +1,35 @@
-#contenidoleft{
-	width: 100%;
-	height: 400px;
-	
+*{
+	margin: 0px;;
+	padding: 0px;
+	box-sizing: border-box;
 }
-#contenidorigth{
-	width: 100%;
-	height: 400px;
-	
+.row {
+    display: flex;
+    flex-wrap: wrap;
+	margin-right: 0 !important;
+    margin-left: 0 !important; 
 }
-
-#contenidorigth img {
-    max-width: 100%;
-    height: 400px;
+.cajauno{
+	max-width: 100%;
+    height: auto;
+    float: left;
+    text-align: center;
+    margin-top: 100px;
+	padding-left: 20px;
 	overflow: hidden;
-	padding-left: 125px;
-	margin-right: 0px;
+}
+.cajados{
+    height: auto;
+    text-align: center;
+    margin-top: 30px;
+
+	
+}
+.cajados img{
+	max-width: 100%;
+	height: auto;
+	
+	
 }
 
 .titlesction {
@@ -27,11 +42,8 @@
 .contenido {
 	margin-top: 20px;
 }
-#contenidocentral{
+.cajatres{
 		position: relative;
-		overflow: hidden;
-		width: 100%;
-		padding-left: 0px;
 		height: 500px;
 		background-image: url("https://demos.hogash.com/phaeton-restaurant-html/images/section2.jpg");
 		animation: movimiento 10s infinite linear alternate;
