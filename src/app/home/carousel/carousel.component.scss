@@ -1,3 +1,7 @@
+@import "~swiper/swiper";
+@import "~swiper/components/effect-coverflow/effect-coverflow";
+@import "~swiper/components/pagination/pagination";
+
 .carousel-item{
     
     max-width: 100%;
@@ -44,3 +48,22 @@
     font-weight: 700;
     letter-spacing: 5px;
 }
+
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+

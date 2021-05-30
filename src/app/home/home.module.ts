@@ -9,6 +9,8 @@ import {HomeRoutingModule} from './home-routing.module'
 import { LoginComponent } from '../auth/login/login.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { CommonModule } from '@angular/common';
+import { SwiperModule } from 'swiper/angular';
+
 @NgModule({
   declarations: [
     NavBarComponent,
@@ -24,7 +26,10 @@ import { CommonModule } from '@angular/common';
   entryComponents : [LoginComponent],
   imports: [    
     HomeRoutingModule,
-    CommonModule    
+    CommonModule,
+
+    //Swipper
+    SwiperModule,
   ],
   providers: [],
   bootstrap: [MainHomeComponent],
