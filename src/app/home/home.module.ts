@@ -27,9 +27,9 @@ import { SwiperModule } from 'swiper/angular';
   imports: [    
     HomeRoutingModule,
     CommonModule,
-
-    //Swipper
-    SwiperModule,
+    
+     //Swipper
+     SwiperModule,  
   ],
   providers: [],
   bootstrap: [MainHomeComponent],
