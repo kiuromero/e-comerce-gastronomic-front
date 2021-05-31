@@ -8,7 +8,6 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LazyLoadImageModule, LAZYLOAD_IMAGE_HOOKS, ScrollHooks } from 'ng-lazyload-image';
-import { NgxFloatButtonModule } from 'ngx-float-button';
 
 
 @NgModule({
@@ -24,7 +23,7 @@ import { NgxFloatButtonModule } from 'ngx-float-button';
     ReactiveFormsModule,
     HttpClientModule,
 
-    NgxFloatButtonModule,
+    
     //Lazy Load Image
     LazyLoadImageModule
   ],
