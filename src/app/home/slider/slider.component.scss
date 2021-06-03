@@ -17,17 +17,7 @@
     
     }
 }
-@media only screen and (max-width: 1000px) {
-    .carousel-indicators .active {
-        opacity: 0 !important;
-    
-    }
-    .carousel-indicators li {
-        opacity: 0 !important;
-        background-color: transparent;
-    }
-    
-}
+
 .carousel-indicators .active {
     opacity: 1;
 

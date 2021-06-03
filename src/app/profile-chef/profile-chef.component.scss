@@ -1,24 +1,40 @@
 .container{
     margin-top: 100px !important;
 }
-
 .cajauno{
+    margin-top: 20px;
     width: 500px;
-    height: 500px;
+    height: 400px;
     float: left;
     text-align: center;
-    margin-top: 30px;
-    padding-right: 1rem;
-    padding-left: 1rem;
-   
+}
+@media only screen and (max-width: 1000px) {
+    .cajauno{
+        display: block;
+        width: 100%;
+        
+    }
+    .instructor img {
+        display: block;
+        width: 100%;
+        margin-top: -10px !important;
+    }
+    .cajados{
+        display: block;
+        width: 100%;
+        margin-top: -30px !important;
+        margin-bottom: 40px;
+    }
+    .title-section {
+        margin-top: 130px;
+    }
 }
 
 .cajados{
     width: 500px;
-    height: 500px;
+    height: auto;
     float: left;
     margin-top: 80px;
-    
 }
 
 .btn-primary{
@@ -30,8 +46,8 @@
     text-align: center;
     font-size: 100px;
     margin-bottom: 50px;
-    margin-top: -80px;
     font-weight: 400;
+    
 }
 
 .title-section {
@@ -39,7 +55,8 @@
     font-size: 34px;
     font-weight: 700;
     letter-spacing: 5px;
-	margin-top: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .contcabezado:before{
@@ -72,7 +89,6 @@
     font-size: 20px;
 }
 .instructor img {
-        position: relative;
         overflow: hidden;
         filter: drop-shadow(0px 20px 50px rgba(0,0,0,0.20));
         border-radius: 10px;
@@ -112,7 +128,16 @@ margin-bottom:1.333em;
     letter-spacing: 5px;
 	margin-top: 20px;
 }
-
+.carduno{
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: all 0.25s;
+}
+.carduno:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.5);
+}
 .whatsapp {
     position:fixed;
     width:60px;

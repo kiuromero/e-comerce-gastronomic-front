@@ -6,6 +6,10 @@ import { ProductService } from '../core/services/product.service';
 import { LoginComponent } from 'src/app/auth/login/login.component';
 import { MatDialog } from '@angular/material/dialog';
 import { environment } from 'src/environments/environment';
+import SwiperCore, { EffectCube, Pagination } from "swiper/core";
+
+// install Swiper modules
+SwiperCore.use([EffectCube, Pagination]);
 
 declare const ePayco: any;
 
