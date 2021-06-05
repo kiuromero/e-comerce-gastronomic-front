@@ -52,14 +52,20 @@ margin-top: -35px;
     margin-bottom: 10px;
     width: 115px;
     padding-left: 10px;
+    margin-left: 10px;
 }
   .nav-link:hover {
     margin-bottom: 10px;
     width: 115px;
 }
 .btn-primary{
-  width: auto;
+  width: auto !important;
   margin: 5px;
+}
+.navbar-collapse {
+  background:  rgba(108, 117, 125, 0.75);
+  margin-top: 12px;
+  padding: 12px 0;
 }
 }
 
