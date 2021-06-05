@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LazyLoadImageModule, LAZYLOAD_IMAGE_HOOKS, ScrollHooks } from 'ng-lazyload-image';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

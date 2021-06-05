@@ -14,11 +14,14 @@
             <span class="sr-only">(current)</span>
           </a>
         </li>
-        <li *ngIf="!logged" class="nav-item" style="padding-right: 10px;">
+        <li *ngIf="!logged" class="nav-item">
           <button (click)="openRegister()" class="btn btn-primary">Registrarme</button>
         </li>
         <li *ngIf="!logged" class="nav-item">
           <button (click)="openLogin()" class="btn btn-primary">Ingresar</button>
+        </li>
+        <li *ngIf="!logged" class="nav-item">
+          <button class="btn btn-primary" [routerLink]="['/','school']">Quienes Somos</button>
         </li>
        <!--  <li *ngIf="!logged" class="nav-item" [routerLink]="['/','message',1]">
           <button (click)="openLogin()" class="btn btn-primary">Chat</button>

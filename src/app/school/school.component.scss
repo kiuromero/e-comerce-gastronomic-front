@@ -1,0 +1,128 @@
+.container{
+    margin-top: 100px !important;
+}
+.cajauno{
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.cajados{
+    width: auto;
+    height: auto;
+    margin-top: 80px;
+}
+.instructor__name{
+    font-family:'Kaushan Script', cursive;
+    margin-top: 10px;
+    width: auto;
+}
+.instructor__title{
+    font-family:'Kaushan Script', cursive; 
+    font-size: 28px !important;
+}
+@media only screen and (max-width: 1000px) {
+    .cajauno{
+        display: block;
+        width: 100%;
+        
+    }
+    .instructor img {
+        display: block;
+        width: 100%;
+        margin-top: -10px !important;
+    }
+    .cajados{
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        margin-left:auto;
+        margin-top: -8px;
+    }
+    .title-section {
+        margin-top: 130px;
+    }
+    .imagendos{
+        margin-right:20px !important;
+    }
+}
+
+.title{
+    text-align: center;
+    font-size: 100px;
+    margin-bottom: 50px;
+    font-weight: 400;
+    
+}
+
+.title-section {
+	font-family:'Kaushan Script', cursive;
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.instructor img {
+        overflow: hidden;
+        border-radius: 10px;
+        max-width: 350px;
+        margin-bottom: 15px;
+    }
+
+.imagendos{
+    float: right;
+    margin-left: 5px;
+    border-radius: 10px;
+    border: solid;
+}
+
+.instructor__title {
+    color: #df8622;
+    
+}
+.instructor__title {
+    margin: 0 0 0.5rem;
+    font-weight: 400;
+    font-size: 1.333em;
+}
+.instructor__name {
+    color: #000000;
+    font-size: 2.333em;
+}
+
+hr{
+border: none;
+border-top:1px solid #df8622;
+margin-top: 1.333em;
+margin-bottom:1.333em;
+}
+
+
+.title-product {
+	font-family:'Kaushan Script', cursive;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 5px;
+	margin-top: 20px;
+}
+
+.whatsapp {
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    z-index:100;
+  }
+  
+  .whatsapp-icon {
+    margin-top:13px;
+  }
