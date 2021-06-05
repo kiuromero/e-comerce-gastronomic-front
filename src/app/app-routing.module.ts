@@ -29,7 +29,7 @@ const routes: Routes = [
       .then(m => m.MyCoursesModule),
   },
   {
-    path: 'message/:id',
+    path: 'message',
     loadChildren: () => import('./message/message.module')
       .then(m => m.MessageModule),
   },

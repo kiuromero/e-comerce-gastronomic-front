@@ -4,6 +4,8 @@ import { HomeModule } from '../home/home.module';
 import { CommonModule } from '@angular/common';
 import { MessageComponent } from './message.component';
 import { MessageRoutingModule } from './message-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
 @NgModule({
   declarations: [
     MessageComponent
@@ -14,7 +16,10 @@ import { MessageRoutingModule } from './message-routing.module';
   imports: [    
     MessageRoutingModule,
     CommonModule,
-    HomeModule    
+    HomeModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatDialogModule    
   ],
   providers: [],
   bootstrap: [],

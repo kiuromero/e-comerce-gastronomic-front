@@ -8,6 +8,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class AuthService {
   @Output() closeModalLogin: EventEmitter<any> = new EventEmitter();
   @Output() closeModalRegister: EventEmitter<any> = new EventEmitter();
+  @Output() closeModalMessage: EventEmitter<any> = new EventEmitter();
+
   constructor(private http: HttpClient, ) { }
 
   login(data: any){
@@ -26,5 +28,11 @@ export class AuthService {
     const headers = new HttpHeaders()
       .set('Content-Type', 'application/json');
     return this.http.post<any>(environment.apiUrl + '/user/create', data, { headers });
+  }
+
+  sendMessage(data: any) {
+    const headers = new HttpHeaders()
+      .set('Content-Type', 'application/json');
+    return this.http.post<any>(environment.apiUrl + '/message-send', data, { headers });
   }
 }
