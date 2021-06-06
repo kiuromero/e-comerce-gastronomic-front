@@ -82,7 +82,7 @@
             <small class="text-muted">{{ classProduct.detail }}</small>
             <hr />
           </div>
-          <div class="card-body" style="text-align: right;">
+          <div *ngIf="enabledPay" class="card-body" style="text-align: right;">
             <a (click)="pay()" class="btn btn-primary">Inscríbete por <strong> {{amount | currency :
                 'COP'}}</strong></a>
           </div>

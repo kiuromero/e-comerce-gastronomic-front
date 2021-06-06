@@ -14,18 +14,21 @@
             <span class="sr-only">(current)</span>
           </a>
         </li>
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/','school']" data-toggle="collapse" data-target=".navbar-collapse">Quienes Somos
+            <span class="sr-only"></span>
+          </a>
+        </li>
         <li *ngIf="!logged" class="nav-item">
           <button (click)="openRegister()" class="btn btn-primary"data-toggle="collapse" data-target=".navbar-collapse">Registrarme</button>
         </li>
         <li *ngIf="!logged" class="nav-item">
           <button (click)="openLogin()" class="btn btn-primary"data-toggle="collapse" data-target=".navbar-collapse">Ingresar</button>   
         </li>
-        <li *ngIf="!logged" class="nav-item">
+       <!--  <li *ngIf="!logged" class="nav-item">
           <button class="btn btn-primary" [routerLink]="['/','school']" data-toggle="collapse" data-target=".navbar-collapse">Quienes Somos</button>
-        </li>
-       <!--  <li *ngIf="!logged" class="nav-item" [routerLink]="['/','message',1]">
-          <button (click)="openLogin()" class="btn btn-primary">Chat</button>
         </li> -->
+      
         <!-- menu profile user -->
         <li *ngIf="logged" class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown" aria-expanded="false">

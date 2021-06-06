@@ -28,12 +28,16 @@ export class DetailVideosComponent implements OnInit {
   auth : any = [];
   idUser?;
   idProduct?;
+  enabledPay?;
   constructor(private productService: ProductService, private activatedRoute: ActivatedRoute,
     private sanitizer: DomSanitizer, public dialog: MatDialog) {
     let id = this.activatedRoute.snapshot.paramMap.get('id');
-    console.log(id);
+    this.enabledPay = environment.enabledPay;
     this.getProductsById(id);
-    this.loadScript();
+    if (this.enabledPay) {
+      this.loadScript();
+    }
+    
   }
 
   ngOnInit(): void {

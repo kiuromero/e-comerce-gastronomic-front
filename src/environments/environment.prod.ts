@@ -8,4 +8,5 @@ export const environment = {
   urlConfirmation : 'http://dev.api-gastronomic.cerromurillostereo.com/api/webhook',
   urlResponse : 'http://localhost:4200',
   //urlResponse : 'http://thekooc.cerromurillostereo.com/'
+  enabledPay : false
 };
