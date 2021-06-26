@@ -89,6 +89,7 @@ export class DetailVideosComponent implements OnInit {
         extra2: this.idProduct,
         confirmation: environment.urlConfirmation,
         response: environment.urlResponse,
+        p_confirm_method : 'POST',
 
         //Atributos cliente
         name_billing: "Andres Perez",
