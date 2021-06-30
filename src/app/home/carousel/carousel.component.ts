@@ -21,17 +21,18 @@ export class CarouselComponent implements OnInit {
 
   getChefLists() {
     this.chefService.getChefLists().subscribe(
-      (res) => { console.log(res);           
+      (res) => {           
         this.chefs = res.data.map((obj) => {
           return {
             id: obj.id,
-            image : obj.image_chef            
+            image : obj.image_chef,
+            name : obj.full_name            
           };
         });  
-        console.log(this.chefs)      
+           
       },
       (error) => {
-        console.log(error);
+        
       }
     );
   }

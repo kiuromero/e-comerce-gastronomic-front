@@ -1,10 +1,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
 <div class="row">
   <div class="col-lg-12 col-xs-12 col-md-12 col-mb-12">
-<div class="title">
-  <h2 class="titlesction">Nuestros Profesores</h2>
-</div>
-</div>
+    <div class="title">
+      <h2 class="titlesction">Nuestros Profesores</h2>
+    </div>
+  </div>
 </div>
 <swiper [effect]="'coverflow'" [grabCursor]="true" [centeredSlides]="true" [slidesPerView]="'auto'" [coverflowEffect]="{
       rotate: 50,
@@ -16,7 +16,7 @@
   <ng-template swiperSlide *ngFor="let chef of chefs"> <img [routerLink]="['/','profile-chef', chef.id ]"
       src="{{chef.image}}" alt="">
     <div class="details">
-      <h2>Gilberto</h2>
+      <h2>{{chef.name}}</h2>
     </div>
   </ng-template>
 </swiper>

@@ -11,7 +11,7 @@ export const environment = {
   },
   urlConfirmation : 'https://www.kooc.com.co/api-kooc/api/webhook',
   urlResponse : 'https://www.kooc.com.co', 
-  enabledPay : true
+  enabledPay : false
 };
 
 /*

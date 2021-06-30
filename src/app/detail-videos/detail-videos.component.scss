@@ -2,255 +2,306 @@
 @import "~swiper/components/effect-coverflow/effect-coverflow";
 @import "~swiper/components/pagination/pagination";
 
-  .swiper-container {
-    width: 300px;
-    height: 300px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -150px;
-    margin-top: -190px;
-  }
-  #curso{
-      margin-top: -80px;
-  }
-  .cajauno{
-    margin-top: 20px;
-    width: 500px;
-    height: 400px;
-    float: left;
-    text-align: center;
-    margin-bottom: 60px;
+.swiper-container {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -190px;
 }
-.cajados{
-    width:auto;
-    height: auto;
-    float: left;
-    text-align: center;
-    margin-top: 50px;
-    overflow: hidden;
-    margin-left:-40px ;
+#curso {
+  margin-top: -80px;
 }
-.principal{
-    background-image:url(fondouno.png);
+.cajauno {
+  margin-top: 20px;
+  width: 500px;
+  height: 400px;
+  float: left;
+  text-align: center;
+  margin-bottom: 60px;
 }
-.promovideo{
-    width:500px;
-     height: 300px;
+.cajados {
+  width: auto;
+  height: auto;
+  float: left;
+  text-align: center;
+  margin-top: 50px;
+  overflow: hidden;
+  margin-left: -40px;
 }
-.details{
-    width: 100%;
-    height: auto;
-    text-align: center;
 
+.promovideo {
+  width: 500px;
+  height: 300px;
 }
-.text-muted{
-    font-size: 15px !important;
-    text-transform: lowercase !important;
+.details {
+  width: 100%;
+  height: auto;
+  text-align: center;
 }
-.details h2{
-    font-family:'Kaushan Script', cursive !important;
-    font-size: 29px !important;
-    text-align: center !important;
-    margin-top: 330px;
-    margin-left: 30px;
+.text-muted {
+  font-size: 15px !important;
+  text-transform: lowercase !important;
 }
-  .swiper-slide {
-    background-position: center;
-    background-size: cover;
-  }
-  
-  img {
-    display: block;
-    width: 100%;
-    border-radius: 8px;
-  }
- 
+.details h2 {
+  font-family: "Kaushan Script", cursive !important;
+  font-size: 29px !important;
+  text-align: center !important;
+  margin-top: 330px;
+  margin-left: 30px;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+img {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+}
+
 /*.barra img{
     margin-top: -140px;
     margin-bottom: -140px;
     opacity: 1;
 }*/
-.btn-primary{
-    background-color:#df8622 ;
-    border-color: #df8622;
+.btn-primary {
+  background-color: #df8622;
+  border-color: #df8622;
 }
 
-.title{
-    text-align: center;
-    font-size: 100px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-weight: 400;
+.title {
+  text-align: center;
+  font-size: 100px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-weight: 400;
 }
 
 .title-section {
-	font-family:'Kaushan Script', cursive;
-    font-size: 34px;
-    font-weight: 700;
-    letter-spacing: 5px;
-	margin-top: 60px;
+  font-family: "Kaushan Script", cursive;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  margin-top: 60px;
 }
 
-.contcabezado img{
-    width: 100%;
-    height: 480px;
+.contcabezado img {
+  width: 100%;
+  height: 480px;
 }
-.contcabezado{
-    width: 100%;
-    height: 480px;
+.contcabezado {
+  width: 100%;
+  height: 480px;
 }
 .btn-outline-secondary {
-    color:white;
-    border-color: white;
-    background: rgba(223, 134, 34, 0.50);
-    position: relative;
+  color: white;
+  border-color: white;
+  background: rgba(223, 134, 34, 0.5);
+  position: relative;
 }
 
 .btn-outline-secondary :hover {
-    background-color: rgba(108, 117, 125, 0.75) !important;
-    color: white !important;
-    position: relative;
+  background-color: rgba(108, 117, 125, 0.75) !important;
+  color: white !important;
+  position: relative;
 }
-.btn-primary{
-    color:white;
-    border-color: white;
-    background: #df8622;
-    position: relative;
+.btn-primary {
+  color: white;
+  border-color: white;
+  background: #df8622;
+  position: relative;
 }
 .btn-primary:hover {
-    background-color: rgba(108, 117, 125, 0.75) !important;
-    color: white !important;
-    position: relative;
+  background-color: rgba(108, 117, 125, 0.75) !important;
+  color: white !important;
+  position: relative;
 }
 
-.kooc h2{
-font-family: "Kaushan Script", cursive;
-font-size: 80px;
-font-weight: 700;
-letter-spacing: 5px;
-color:  white;
-text-align: center;
-position: relative;
+.kooc h2 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 80px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  color: white;
+  text-align: center;
+  position: relative;
 }
-.contcabezado:before{
+.contcabezado:before {
+  content: "";
+  width: 100%;
+  height: 480px;
+  background-color: rgba(42, 16, 0, 0.45);
+  position: absolute;
+}
+
+.kooc {
+  margin-top: -190px !important;
+}
+@media only screen and (max-width: 1000px) {
+  .kooc {
+    margin-top: -260px !important;
+  }
+  .kooc h2 {
+    font-family: "Kaushan Script", cursive;
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+    position: relative;
+  }
+  .contcabezado {
+    display: block;
+    width: 100%;
+  }
+  .contcabezado:before {
     content: "";
     width: 100%;
     height: 480px;
-    background-color: rgba(42, 16, 0, 0.45);
+    background-color: rgba(42, 16, 0, 0.5);
     position: absolute;
+  }
+  .cajauno {
+    display: block;
+    width: 100%;
+  }
+  .details {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  .cajados {
+    display: block;
+    width: 100%;
+    margin-top: -40px;
+    margin-bottom: 20px;
+    margin-left: 3px;
+  }
+  .promovideo {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  #curso {
+    margin-top: 3px;
+  }
 }
 
-.kooc{
-    margin-top: -190px !important;
-    
-}
-@media only screen and (max-width: 1000px) {
-    .kooc{
-        margin-top: -260px !important;
-    }
-    .kooc h2{
-        font-family: "Kaushan Script", cursive;
-        font-size: 40px;
-        font-weight: 400;
-        text-align: center;
-        color: white;
-        position: relative;
-        }
-        .contcabezado{
-            display: block;
-            width: 100%;
-        }
-        .contcabezado:before{
-            content: "";
-            width: 100%;
-            height: 480px;
-            background-color: rgba(42, 16, 0, 0.5);
-            position: absolute;
-        }
-        .cajauno{
-            display: block;
-            width: 100%;
-        }
-        .details{
-            width: 100%;
-            display: block;
-            text-align: center;
-        }
-        .cajados{
-            display: block;
-            width: 100%;
-            margin-top: -40px;
-            margin-bottom: 20px;
-            margin-left: 3px;
-        }
-        .promovideo{
-            display: block;
-             width:100%;
-             text-align:center;
-             margin-bottom: 10px;
-             margin-top: 10px;
-        }
-        #curso{
-            margin-top: 3px;
-        }
-}
-
-
-
-
-.card-header{
-    background-color: #df8622;
-    color: white;
-    font-size: 20px;
+.card-header {
+  background-color: #df8622;
+  color: white;
+  font-size: 20px;
 }
 .instructor img {
-        height: 150px;
-        width: 150px;
-        position: relative;
-        overflow: hidden;
-        border-radius: 100px;
-        box-shadow: 0 2px 16px 0 rgb(0 0 0 / 50%);
-    }
+  height: 150px;
+  width: 150px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 100px;
+  box-shadow: 0 2px 16px 0 rgb(0 0 0 / 50%);
+}
 
 .instructor__title {
-    color: #df8622;
+  color: #df8622;
 }
 .instructor__title {
-    margin: 0 0 0.5rem;
-    font-weight: 400;
+  margin: 0 0 0.5rem;
+  font-weight: 400;
 }
 .instructor__name {
-    color: #000000;
-    font-size: 1.333em;
+  color: #000000;
+  font-size: 1.333em;
 }
-hr{
-border: none;
-border-top:1px solid #df8622;
-margin-top: 1.333em;
-margin-bottom:1.333em;
+hr {
+  border: none;
+  border-top: 1px solid #df8622;
+  margin-top: 1.333em;
+  margin-bottom: 1.333em;
 }
 .title-product {
-	font-family:'Kaushan Script', cursive;
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 5px;
-	margin-top: 20px;
+  font-family: "Kaushan Script", cursive;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  margin-top: 20px;
 }
 
 .whatsapp {
-    position:fixed;
-    width:60px;
-    height:60px;
-    bottom:40px;
-    right:40px;
-    background-color:#25d366;
-    color:#FFF;
-    border-radius:50px;
-    text-align:center;
-    font-size:30px;
-    z-index:100;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  z-index: 100;
+}
+.whatsapp-icon {
+  margin-top: 13px;
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
+  animation: load7 1.8s infinite ease-in-out;
+}
+.loader {
+  color: #d57a34;
+  font-size: 15px;
+  margin: 80px auto;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  top: 0;
+}
+.loader:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 3.5em;
+}
+@-webkit-keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
   }
-  .whatsapp-icon {
-    margin-top:13px;
+  40% {
+    box-shadow: 0 2.5em 0 0;
   }
+}
+@keyframes load7 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}

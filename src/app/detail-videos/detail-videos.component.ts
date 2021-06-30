@@ -25,10 +25,11 @@ export class DetailVideosComponent implements OnInit {
   amount;
   imageProduct;
   urlVideoProduct;
-  auth : any = [];
+  auth: any = [];
   idUser?;
   idProduct?;
   enabledPay?;
+  showSpinner = true;
   constructor(private productService: ProductService, private activatedRoute: ActivatedRoute,
     private sanitizer: DomSanitizer, public dialog: MatDialog) {
     let id = this.activatedRoute.snapshot.paramMap.get('id');
@@ -37,7 +38,7 @@ export class DetailVideosComponent implements OnInit {
     if (this.enabledPay) {
       this.loadScript();
     }
-    
+
   }
 
   ngOnInit(): void {
@@ -89,7 +90,7 @@ export class DetailVideosComponent implements OnInit {
         extra2: this.idProduct,
         confirmation: environment.urlConfirmation,
         response: environment.urlResponse,
-        p_confirm_method : 'POST',
+        p_confirm_method: 'POST',
 
         //Atributos cliente
         name_billing: "Andres Perez",
@@ -110,8 +111,8 @@ export class DetailVideosComponent implements OnInit {
 
   getProductsById(idProduct) {
     this.productService.getProductsById(idProduct).subscribe(
-      (res) => {     
-        this.idProduct = res.data[0].id_product;  
+      (res) => {
+        this.idProduct = res.data[0].id_product;
         this.nameProduct = res.data[0].name;
         this.descriptionProduct = res.data[0].description;
         this.amount = res.data[0].amount;
@@ -123,7 +124,10 @@ export class DetailVideosComponent implements OnInit {
             title: obj.class_title,
             detail: obj.class_detail,
           };
-        });      
+        });
+        setTimeout(() => {
+          this.showSpinner = false;
+        }, 1000);
       },
       (error) => {
         console.log(error);

@@ -1,7 +1,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
 <app-nav-bar></app-nav-bar>
-
-<div class="container">
+<div *ngIf="showSpinner" class="d-flex justify-content-center">
+  <div class="loader"></div>
+</div>
+<div *ngIf="!showSpinner" class="container">
   <div class="row">
     <div class="col-lg-6">
       <div class="cajauno">
@@ -27,24 +29,24 @@
     </div>
   </div>
   <div class="title">
-    <h2 class="title-section">Cursos con  {{profileChef.name}} </h2>
+    <h2 class="title-section">Cursos con {{profileChef.name}} </h2>
   </div>
   <div class="row">
     <div class="col-md-4 mb-5" *ngFor="let chef of chefs">
-        <div class="carduno">
-            <img class="img-fluid rounded mb-4 mb-lg-0" style="height: 200px; width: 400px;" src="{{chef.image}}" alt="">
-            <div class="card-body">
-                <h2 class="title-chef">{{chef.name}}</h2>
-                <p class="card-text">{{chef.description}}</p>
-            </div>
-            <div class="card-footer">
-                <a [routerLink]="['/','detail-course', chef.id]" class="btn btn-primary btn-sm">Ver Mas</a>
-            </div>
+      <div class="carduno">
+        <img class="img-fluid rounded mb-4 mb-lg-0" style="height: 200px; width: 400px;" src="{{chef.image}}" alt="">
+        <div class="card-body">
+          <h2 class="title-chef">{{chef.name}}</h2>
+          <p class="card-text">{{chef.description}}</p>
         </div>
+        <div class="card-footer">
+          <a [routerLink]="['/','detail-course', chef.id]" class="btn btn-primary btn-sm">Ver Mas</a>
+        </div>
+      </div>
     </div>
   </div>
-    
-    <!-- /.col-md-4 -->
+
+  <!-- /.col-md-4 -->
 </div>
 <app-float-buttons></app-float-buttons>
 <app-footer></app-footer>
