@@ -42,6 +42,14 @@
 .swiper-slide img {
   display: block;
   width: 100%;
-
+  border-radius: 8px;
+}
+.perfil{
+  position: relative;
+  max-width: 100%;
+}
+.perfil:hover{
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.5);
 }
 

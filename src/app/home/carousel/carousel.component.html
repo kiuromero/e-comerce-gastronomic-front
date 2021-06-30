@@ -13,10 +13,14 @@
       modifier: 1,
       slideShadows: true
     }" [pagination]="false" class="mySwiper">
-  <ng-template swiperSlide *ngFor="let chef of chefs"> <img [routerLink]="['/','profile-chef', chef.id ]"
-      src="{{chef.image}}" alt="">
+    
+  <ng-template swiperSlide *ngFor="let chef of chefs"> 
+    <div class="perfil">
+      <div class="layer"></div>
+    <img [routerLink]="['/','profile-chef', chef.id ]" src="{{chef.image}}" alt="">
     <div class="details">
       <h2>{{chef.name}}</h2>
+    </div>
     </div>
   </ng-template>
 </swiper>

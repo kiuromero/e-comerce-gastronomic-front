@@ -8,6 +8,7 @@
 <div class="row text-center">
   <div class="col-lg-4 col-md-6 mb-4" *ngFor="let category of categories">
     <div class="carduno">
+      <div class="layer"></div>
       <a [routerLink]="['/', 'detail-category', category.id, category.name]"
         ><img
           style="width: auto; height: 400px"
