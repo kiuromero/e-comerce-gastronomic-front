@@ -1,5 +1,44 @@
-<footer class="py-5 bg-dark">
-    <div class="container">
+<footer>
+    <div class="box__copyright">
+        <hr>
+    </div>
+    <div class="container__footer">
+        <div class="box__footer">
+            <div class="logo">
+                <img src="assets/images/koocir.png" alt="">
+            </div>
+            <div class="terms">
+                <p class="text-left">La Escuela Kooc es una entidad Creada con el propósito contribuir a elevar el desarrollo social, Económico educativo y cultural de Colombia,enfocada básicamente en la capacitación de personas profesionales.</p>
+            </div>
+        </div>
+        <div class="box__footer">
+            <h2>Cursos</h2>
+            <a [routerLink]="['/', 'detail-category', 1,'Panadería']">Panadería</a>
+            <a href="#">Pastelería</a>
+            <a href="#">Cocina</a>
+        </div>
+
+        <div class="box__footer">
+            <h2>Kooc</h2>
+            <a href="#">Quienes Somos</a>
+            <a href="#">Registrarme</a>
+            <a href="#">Pregunta</a>           
+        </div>
+
+        <div class="box__footer">
+            <h2>Redes Sociales</h2>
+            <a href="#"> <i class="fa fa-facebook"></i> Facebook</a>
+            <a href="#"><i class="fa fa-twitter"></i> Twitter</a>
+            <a href="#"><i class="fa fa-instagram"></i> Instagram</a>
+        </div>
+
+    </div>
+
+    <div class="box__copyright" style="margin-top: -50px;">
+        <hr>
+        <p>Todos los derechos reservados © 2021 <b>MagtimusPro</b></p>
+    </div>
+    <!--div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; Kooc Escuela de Gastronomía - 2021</p>
     </div>
     <!-- /.container -->
