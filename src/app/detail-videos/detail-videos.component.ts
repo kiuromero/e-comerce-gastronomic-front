@@ -30,6 +30,7 @@ export class DetailVideosComponent implements OnInit {
   idProduct?;
   enabledPay?;
   showSpinner = true;
+  chefs = [];
   constructor(private productService: ProductService, private activatedRoute: ActivatedRoute,
     private sanitizer: DomSanitizer, public dialog: MatDialog) {
     let id = this.activatedRoute.snapshot.paramMap.get('id');
@@ -112,19 +113,26 @@ export class DetailVideosComponent implements OnInit {
   getProductsById(idProduct) {
     this.productService.getProductsById(idProduct).subscribe(
       (res) => {
-        this.idProduct = res.data[0].id_product;
-        this.nameProduct = res.data[0].name;
-        this.descriptionProduct = res.data[0].description;
-        this.amount = res.data[0].amount;
-        this.imageProduct = res.data[0].image;
-        this.urlVideoProduct = this.transformUrl(res.data[0].url_video);
-        this.class_product = res.data.map((obj) => {
+        this.idProduct = res.data.product[0].id_product;
+        this.nameProduct = res.data.product[0].name;
+        this.descriptionProduct = res.data.product[0].description;
+        this.amount = res.data.product[0].amount;
+        this.imageProduct = res.data.product[0].image;
+        this.urlVideoProduct = this.transformUrl(res.data.product[0].url_video);
+        this.class_product = res.data.product.map((obj) => {
           return {
             description: obj.description,
             title: obj.class_title,
             detail: obj.class_detail,
           };
         });
+        this.chefs = res.data.chef.map((obj) => {
+          return {
+            id : obj.id,
+            name: obj.full_name,
+            image: obj.image_chef,            
+          };
+        }); 
         setTimeout(() => {
           this.showSpinner = false;
         }, 1000);
