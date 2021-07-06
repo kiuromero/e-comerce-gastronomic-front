@@ -1,0 +1,30 @@
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+<app-nav-bar></app-nav-bar>
+<div class="container">
+  <mat-dialog-content>
+    <div class="logo">
+      <img style="width: 100px; height: 100px; border-radius: 10px;" src="assets/images/logo.png" alt="">
+    </div>
+    <p class="title">Contactanos</p>
+
+    <form [formGroup]="formMessage" (submit)="sendMessage()" novalidate>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Nombres y Apellidos</label>
+        <input formControlName="name" type="text" class="form-control" id="exampleFormControlInput1" />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email</label>
+        <input formControlName="email" type="email" class="form-control" id="exampleFormControlInput1" />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Teléfono de Contacto</label>
+        <input formControlName="cellPhone" type="number" class="form-control" id="exampleFormControlInput1" />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Mensaje</label>
+        <textarea formControlName="message" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </mat-dialog-content>
+</div>

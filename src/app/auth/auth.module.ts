@@ -4,12 +4,17 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { MatDialogModule } from '@angular/material/dialog';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,  
-    AuthRoutingModule,  
+    AuthRoutingModule,
+    
+    //Angular Material  
+    MatDialogModule
   ],
   declarations: [LoginComponent, RegisterComponent],
   providers: [],

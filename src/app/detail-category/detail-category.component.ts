@@ -10,28 +10,33 @@ import { ProductService } from '../core/services/product.service';
 export class DetailCategoryComponent implements OnInit {
   products = [];
   nameCategory;
-  constructor(private activatedRoute : ActivatedRoute, private productService : ProductService) {
+  showSpinner = true;
+  constructor(private activatedRoute: ActivatedRoute, private productService: ProductService) {
     let id = this.activatedRoute.snapshot.paramMap.get('id');
     this.nameCategory = this.activatedRoute.snapshot.paramMap.get('name');
     console.log(id, this.nameCategory);
     this.getProductsByCategory(id);
-   }
+  }
 
-  ngOnInit(): void {   
- 
+  ngOnInit(): void {
+
   }
 
   getProductsByCategory(idCategory) {
     this.productService.getProductsByCategory(idCategory).subscribe(
-      (res) => { console.log(res);           
+      (res) => {
+        console.log(res);
         this.products = res.data.map((obj) => {
           return {
             id: obj.id_product,
             name: obj.name,
             image: obj.image,
-            description : obj.description
+            description: obj.description
           };
-        });        
+        });
+        setTimeout(() => {
+          this.showSpinner = false;
+        }, 1000);
       },
       (error) => {
         console.log(error);

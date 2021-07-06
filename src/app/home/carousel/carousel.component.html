@@ -1,51 +1,26 @@
-<div id="slider-home" id="idExperienciaDesktop" class="carousel slide my-4" data-ride="carousel">
-  <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="row">
-          <div class="col-lg-4">
-          <img src="assets/images/fichauno.png" alt="">
-          </div>
-          <div class="col-lg-4">
-            <img src="assets/images/fichauno.png" alt="">
-            </div>  
-            <div class="col-lg-4">
-              <img src="assets/images/fichauno.png" alt="">
-              </div>    
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="row">
-          <div class="col-lg-4">
-            <img src="assets/images/fichauno.png" alt="">
-          </div>
-          <div class="col-lg-4">
-            <img src="assets/images/fichauno.png" alt="">
-            </div>
-            <div class="col-lg-4">
-              <img src="assets/images/fichauno.png" alt="">
-              </div>
-      </div>
-      </div>
-      <div class="carousel-item">
-        <div class="row">
-          <div class="col-lg-4">
-            <img src="assets/images/fichauno.png" alt="">
-          </div>
-          <div class="col-lg-4">
-            <img src="assets/images/fichauno.png" alt="">
-            </div>
-            <div class="col-lg-4">
-              <img src="assets/images/fichauno.png" alt="">
-              </div>
-      </div>
-      </div>
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+<div class="row">
+  <div class="col-lg-12 col-xs-12 col-md-12 col-mb-12">
+    <div class="title">
+      <h2 class="titlesction">Nuestros Profesores</h2>
+    </div>
   </div>
-  <a class="carousel-control-prev" href="#idExperienciaDesktop" role="button" data-slide="prev">
-    <span aria-hidden="true"> <img class="left-arrow" src="assets/images/flechaleft.png" alt=""> </span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#idExperienciaDesktop" role="button" data-slide="next">
-    <span aria-hidden="true"> <img class="right-arrow" src="assets/images/flecharight.png" alt=""> </span>
-    <span class="sr-only">Next</span>
-  </a>
 </div>
+<swiper [effect]="'coverflow'" [grabCursor]="true" [centeredSlides]="true" [slidesPerView]="'auto'" [coverflowEffect]="{
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true
+    }" [pagination]="false" class="mySwiper">
+    
+  <ng-template swiperSlide *ngFor="let chef of chefs"> 
+    <div class="perfil">
+      <div class="layer"></div>
+    <img [routerLink]="['/','profile-chef', chef.id ]" src="{{chef.image}}" alt="">
+    <div class="details">
+      <h2>{{chef.name}}</h2>
+    </div>
+    </div>
+  </ng-template>
+</swiper>

@@ -7,11 +7,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { LazyLoadImageModule, LAZYLOAD_IMAGE_HOOKS, ScrollHooks } from 'ng-lazyload-image'; 
+import { LazyLoadImageModule, LAZYLOAD_IMAGE_HOOKS, ScrollHooks } from 'ng-lazyload-image';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent,    
+    AppComponent,
+       
   ],
   imports: [
     BrowserModule,
@@ -21,6 +24,7 @@ import { LazyLoadImageModule, LAZYLOAD_IMAGE_HOOKS, ScrollHooks } from 'ng-lazyl
     ReactiveFormsModule,
     HttpClientModule,
 
+    
     //Lazy Load Image
     LazyLoadImageModule
   ],

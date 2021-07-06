@@ -1,7 +1,22 @@
 .btn-primary{
-    background-color:#d57a34 ;
-    border-color: #d57a34;
+    background-color:#df8622  ;
+    border-color: #df8622;
     margin-bottom: 10px;
+    width: auto;
+    margin: 5px;
+}
+.nav-link{
+  margin-top: 5px;
+}
+.btn-primary:hover {
+    background-color: rgba(108, 117, 125, 0.75);
+    border-color: white;
+}
+.nav-link:hover {
+    background-color: rgba(108, 117, 125, 0.75);
+    margin-right: 10px;
+    border-radius:  5px 20px 20px 5px;
+    border: solid;
 }
 
 .mat-dialog-container {
@@ -9,7 +24,64 @@
 }
 
 .btn-register{
-    background-color: #6c757d;
-    border-color: #6c757d;
+    background-color: #df8622 ;
+    border-color: #df8622 ;
     color: white;
+}
+.btn-register:hover {
+    background-color: rgba(108, 117, 125, 0.75);
+    border-color: white;
+}
+.navbar-brand{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+} 
+@media (max-width:1000px) {
+  .navbar-brand {
+margin-top: -35px;
+  }
+  .navbar-dark .navbar-toggler:hover {
+    background-color: rgba(108, 117, 125, 0.75);
+    border-color: white;
+}
+  .nav-link{
+    background-color:#df8622  ;
+    border-color: #df8622;
+    border-radius:  5px 20px 20px 5px;
+    margin-bottom: 10px;
+    width: 115px;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+  .nav-link:hover {
+    margin-bottom: 10px;
+    width: 115px;
+}
+.btn-primary{
+  width: auto !important;
+  margin: 5px;
+}
+.navbar-collapse {
+  background:  rgba(108, 117, 125, 0.75);
+  margin-top: 12px;
+  padding: 12px 0;
+}
+}
+
+
+
+.navbar-dark .navbar-toggler {
+    color: rgba(255,255,255,.5);
+ border-color: rgba(255,255,255,.1);
+ margin-top: -35px;
+}
+
+.navbar-brand img{
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+.navbar{
+background-color: black !important;
+height: 70px
 }

@@ -1,25 +1,29 @@
 <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
 <app-nav-bar></app-nav-bar>
 <app-slider></app-slider>
-<div class="container">
+<div *ngIf="showSpinner" class="d-flex justify-content-center">
+    <div class="loader"></div>
+</div>
+<div *ngIf="!showSpinner" class="container">
     <div class="title">
         <h2 class="title-section"> Últimos Cursos de {{nameCategory}} </h2>
     </div>
     <div class="row">
         <div class="col-md-4 mb-5" *ngFor="let product of products">
             <div class="carduno">
-                <img class="img-fluid rounded mb-4 mb-lg-0" style="height: 200px; width: 400px;" src="{{product.image}}" alt="">
+                <img class="img-fluid rounded mb-4 mb-lg-0" style="height: 200px; width: 400px;" src="{{product.image}}"
+                    alt="">
                 <div class="card-body">
                     <h2 class="title-product">{{product.name}}</h2>
                     <p class="card-text">{{product.description}}</p>
                 </div>
                 <div class="card-footer">
-                    <a [routerLink]="['/','detail-videos', product.id]" class="btn btn-primary btn-sm">Ver Mas</a>
+                    <a [routerLink]="['/','detail-course', product.id]" class="btn btn-primary btn-sm">Ver Mas</a>
                 </div>
             </div>
         </div>
         <!-- /.col-md-4 -->
     </div>
 </div>
-
+<app-float-buttons></app-float-buttons>
 <app-footer></app-footer>

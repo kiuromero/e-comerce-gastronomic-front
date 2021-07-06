@@ -1,30 +1,38 @@
 <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+
 <div class="row">
-    <section id="contenidoleft" class="col-lg-6">
-        <h2 class="titlesction"> Elige el plan que más te acomode </h2>
-        <p class="contenido"> Puedes adquirir una membresía para tener acceso a todos nuestros cursos por tiempo
-            limitado o puedes comprar cursos individuales que serán tuyos para toda la vida. </p>
-        <button type="button" [routerLink]="['/','detail-category', 1]" class="btn btn-outline-secondary">Ver
-            curso</button>
-    </section>
-    <section id="contenidorigth" class="col-lg-6" style="padding-right: 0px;">
-        <img alt="chef" src="assets/images/chefjuan.jpg">
-    </section>
-</div>
-<div class="row">
-    <section id="contenidocentral" class="col-lg-12">
-        <div class="carousel-caption text-center">
-
-
-            <img alt="menú 2x1" src="assets/images/2x1.png">
-            <h2 class="titlesection">Especialidad de la Casa</h2>
-            <p>Consulta esta y todas nuestras otras promociones en nuestro apartado.</p>
-            <button type="button" [routerLink]="['/','detail-category', 1]" class="btn btn-outline-secondary">Ver
-                curso</button>
-
+    <div class="col-lg-6">
+        <div class="cajauno">
+            <section>
+                <h2 class="titlesction"> Elige el plan que más te acomode </h2>
+                <p class="contenido"> Puedes adquirir una membresía para tener acceso a todos nuestros cursos por tiempo
+                    limitado o puedes comprar cursos individuales que serán tuyos para toda la vida. </p>
+                <!--  <button type="button" [routerLink]="['/','detail-category', 1]" class="btn btn-outline-secondary">Ver
+            curso</button> -->
+            </section>
         </div>
-    </section>
+    </div>
+    <div class="col-lg-6">
+        <div class="cajados">
+            <section>
+                <img alt="chef" src="https://www.kooc.com.co/assets/images/cursos/grupofinal.png">
+            </section>
+        </div>
+    </div>
 </div>
-<div class="title">
-    <h2 class="titlesction"> Nuestros Profesores</h2>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="cajatres text-center">
+            <section>
+                <div class="carousel-caption text-center">
+                    <img alt="menú 2x1" src="https://www.kooc.com.co/assets/images/2x1.png">
+                    <h2 class="titlesection">Especialidad de la Casa</h2>
+                    <p>Consulta esta y todas nuestras otras promociones en nuestro apartado.</p>
+                    <!--  <button type="button" [routerLink]="['/','detail-category', 1]"
+                        class="btn btn-outline-secondary">Ver
+                        curso</button> -->
+                </div>
+            </section>
+        </div>
+    </div>
 </div>

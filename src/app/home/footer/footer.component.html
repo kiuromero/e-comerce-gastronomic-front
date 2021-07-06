@@ -1,6 +1,44 @@
-<footer class="py-5 bg-dark">
-    <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Kooc Escuela de Gastronomía - 2021</p>
+<footer>
+    <div class="box__copyright">
+        <hr>
     </div>
-    <!-- /.container -->
+    <div class="container__footer">
+        <div class="box__footer">
+            <div class="logo">
+                <img src="assets/images/koocir.png" alt="">
+            </div>
+            <div class="terms">
+                <p class="text-left">La Escuela Kooc es una entidad Creada con el propósito contribuir a elevar el
+                    desarrollo social, Económico educativo y cultural de Colombia,enfocada básicamente en la
+                    capacitación de personas profesionales.</p>
+            </div>
+        </div>
+        <div class="box__footer">
+            <h2>Cursos</h2>
+            <a [routerLink]="['/', 'detail-category', 1,'Panadería']">Panadería</a>
+            <a [routerLink]="['/', 'detail-category', 2,'Pastelería']">Pastelería</a>
+            <a [routerLink]="['/', 'detail-category', 3,'Cocina']">Cocina</a>
+        </div>
+
+        <div class="box__footer">
+            <h2>Kooc</h2>
+            <a [routerLink]="['/', 'school']">Quienes Somos</a>
+            <a (click)="openRegister()" href="javascript:void(0)">Registrarme</a>
+            <a (click)="openMessageForm()" href="javascript:void(0)">Contactanos</a>
+        </div>
+
+        <div class="box__footer">
+            <h2>Redes Sociales</h2>
+            <a href="https://www.facebook.com/kooc.gastronomia" target="blank"> <i class="fa fa-facebook"></i> Facebook</a>
+           <!--  <a href="#"><i class="fa fa-twitter"></i> Twitter</a> -->
+            <a href="https://www.instagram.com/p/CQrMicIh4pV/?utm_source=ig_web_copy_link" target="blank"><i class="fa fa-instagram"></i> Instagram</a>
+        </div>
+
+    </div>
+
+    <div class="box__copyright" style="margin-top: -50px;">
+        <hr>
+        <p class="m-0 text-center">Todos los derechos reservados Copyright &copy;<b> Kooc Escuela de Gastronomía - 2021 </b></p>
+    </div>
+    
 </footer>
