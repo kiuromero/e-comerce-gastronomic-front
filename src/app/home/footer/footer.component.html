@@ -15,9 +15,9 @@
         </div>
         <div class="box__footer">
             <h2>Cursos</h2>
-            <a [routerLink]="['/', 'detail-category', 1,'Panadería']">Panadería</a>
-            <a [routerLink]="['/', 'detail-category', 2,'Pastelería']">Pastelería</a>
-            <a [routerLink]="['/', 'detail-category', 3,'Cocina']">Cocina</a>
+            <a (click)="reloadCategory(1,'Panadería')" [routerLink]="['/', 'detail-category', 1,'Panadería']">Panadería</a>
+            <a (click)="reloadCategory(2,'Pastelería')" [routerLink]="['/', 'detail-category', 2,'Pastelería']">Pastelería</a>
+            <a (click)="reloadCategory(3,'Cocina')" [routerLink]="['/', 'detail-category', 3,'Cocina']">Cocina</a>
         </div>
 
         <div class="box__footer">
