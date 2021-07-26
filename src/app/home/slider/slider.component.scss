@@ -13,9 +13,24 @@
         display: block;
         width: 100%;
         height: auto;
-    padding-top: 65px;
+    /*padding-top: 65px;*/
     
     }
+  
+    .carousel-caption h1 {
+        margin-top: -190px;
+        padding-left: 2px !important;
+        text-align: left;
+        line-height: 90%;
+        font-size: 30px !important;
+    }
+    .carousel-caption .btn-primary {
+        margin-top: -5px !important;
+        margin-left: 8px !important;
+    }
+  
+
+    
 }
 
 .carousel-indicators .active {
@@ -43,7 +58,7 @@
 #slider-home {
 	margin-bottom: 50px;
 }
-.carousel-caption {
+/*.carousel-caption {
 	background-color: rgba(41, 23, 1, 0.75);
 	height: 100%;
 	left: 0;
@@ -51,6 +66,40 @@
 	padding: 30px 45px;
 	text-align: left;
 	width: 340px;
+}*/
+.carousel-caption {
+	background-color: rgba(0, 0, 0, .5);
+	height: 100%;
+	left: 0;
+	top: 0;
+    padding: 30px 45px;
+	text-align: left;
+	width: 100%;
+}
+.carousel-caption h1{
+    padding-top: 190px;
+    padding-left: 55px;
+    font-size: 52px;
+    background-size: cover;
+    line-height: 90%;
+}
+.carousel-caption .btn-primary {
+    margin-top: 18px;
+    margin-left: 60px;
+}
+.btn-primary{
+    background-color:#df8622  ;
+    border-color: #df8622;
+    margin-bottom: 10px;
+    width: auto;
+    margin: 5px;
+}
+.btn-primary:hover {
+    background-color: rgba(108, 117, 125, 0.75);
+    border-color: white;
+}
+.carousel-inner{
+    margin-top: 70px !important;
 }
 .carousel-caption p {
     font-size: 14px;
