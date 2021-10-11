@@ -119,9 +119,13 @@ hr {
 .promovideo {
   text-align: center;
 }
-
+/*@font-face {
+  font-family: 'Kaushan Script';
+  font-display: swap;
+  src: url(/assets/fontcursiva/KaushanScript-Regular.ttf) format('truetype');
+}*/
 .title-product {
-  font-family: "Kaushan Script", cursive;
+  font-family: 'Kaushan Script';
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 5px;

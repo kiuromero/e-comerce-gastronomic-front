@@ -13,13 +13,18 @@
     height: auto;
     margin-top: 80px;
 }
-.instructor__name{
-    font-family:'Kaushan Script', cursive;
+/*@font-face {
+    font-family: 'Kaushan Script';
+    font-display: swap ;
+    src: url(/assets/fontcursiva/KaushanScript-Regular.ttf) format('truetype');
+  }*/
+.titleschool{
+    font-family:'Kaushan Script';
     margin-top: 10px;
     width: auto;
 }
 .instructor__title{
-    font-family:'Kaushan Script', cursive; 
+    font-family:'Kaushan Script'; 
     font-size: 28px !important;
 }
 @media only screen and (max-width: 1000px) {

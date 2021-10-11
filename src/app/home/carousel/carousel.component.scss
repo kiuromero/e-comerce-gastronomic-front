@@ -2,16 +2,24 @@
 @import "~swiper/components/effect-coverflow/effect-coverflow";
 @import "~swiper/components/pagination/pagination";
 
+/*@font-face {
+  font-family: 'Kaushan Script';
+  font-display: swap;
+  src: url(/assets/fontcursiva/KaushanScript-Regular.ttf) format('truetype');
+}*/
 .titlesction {
-	font-family:'Kaushan Script', cursive !important;
+	font-family: 'Kaushan Script'!important;
     font-size: 34px !important;
     font-weight: 700 !important;
     letter-spacing: 5px !important;
+
+    
 }
 .details h2{
-    font-family:'Kaushan Script', cursive !important;
+    font-family:'Kaushan Script'!important;
     font-size: 29px !important;
     text-align: center !important;
+   
 }
 .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
     bottom: 10px;
@@ -43,6 +51,12 @@
   display: block;
   width: 100%;
   border-radius: 8px;
+}
+@media only screen and (max-width: 1000px) {
+  .swiper-slide img {
+    width: 300px;
+    height: 300px;
+  }
 }
 .perfil{
   position: relative;
